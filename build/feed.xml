@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thought Knots</title>
+    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost:8080</link>
+    <description>The meandering musings and exploratory hacks of Joey Cato</description>
+    <pubDate>Thu, 31  Aug 2017 15:00:00 -0700</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Subtitle Reactions!</title>
+      <link>http://localhost:8080/articles/subtitlereactions/</link>
+      <pubDate>Thu, 31  Aug 2017 15:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/subtitlereactions/</guid>
+      <author></author>
+      <description>&lt;p&gt;Netflix Hack Day is here again! For this experimental hack, we decided to add multiple visualizations to Netflix subtitles during playback. Each time a subtitle changes on-screen, we add the following&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Image stickers ( sourced by &lt;a href=&quot;https://developers.giphy.com/&quot;&gt;GIPHY API&lt;/a&gt; search’s top result )&lt;/li&gt;
+&lt;li&gt;Emojis ( based on &lt;a href=&quot;https://www.npmjs.com/package/moji-translate&quot;&gt;moji-translate&lt;/a&gt; library )&lt;/li&gt;
+&lt;li&gt;Mood colorization ( based on &lt;a href=&quot;https://www.npmjs.com/package/sentiment&quot;&gt;AFINN sentiment&lt;/a&gt; library )&lt;/li&gt;
+&lt;li&gt;As a bonus, if we detect song lyrics a disco ball drops down from the top of the screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/subtitlereactions/subtitlereactions1.png&quot; alt=&quot;subtitlereactions1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/subtitlereactions/subtitlereactions2.png&quot; alt=&quot;subtitlereactions2&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Stranger Games</title>
+      <link>http://localhost:8080/articles/strangergames/</link>
+      <pubDate>Fri, 03 Feb 2017 15:00:00 -0800</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/strangergames/</guid>
+      <author></author>
+      <description>&lt;p&gt;For my recent &lt;a href=&quot;http://techblog.netflix.com/2017/01/netflix-hack-day-winter-2017.html&quot;&gt;Netflix Hack Day&lt;/a&gt; project, I
+wanted to create something based on &lt;a href=&quot;https://www.netflix.com/title/80057281&quot;&gt;Stranger Things&lt;/a&gt;, a Netflix Original that debuted last year and quickly appealed to my interest in 80’s nostalgia. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Having seen a few &lt;a href=&quot;http://www.strangerplay.com&quot;&gt;fan-based&lt;/a&gt; &lt;a href=&quot;https://flixarcade.netflix.io/&quot;&gt;video&lt;/a&gt;
+&lt;a href=&quot;https://infamousquests.itch.io/stranger-things&quot;&gt;games&lt;/a&gt; following its popular release, I felt equally inspired to make
+some kind of video game contribution as well. It also interested me to design something in the process that was more
+era-appropriate. Since our &lt;em&gt;Stranger Things&lt;/em&gt; story begins in 1983, it seemed logical to aim for an &lt;a href=&quot;https://en.wikipedia.org/wiki/Atari_2600_hardware&quot;&gt;Atari 2600&lt;/a&gt; aesthetic. Even the show itself referenced Atari, so that was all the convincing I needed :)&lt;/p&gt;
+&lt;p&gt;In the end I decided to borrow game-play elements from &lt;a href=&quot;https://en.wikipedia.org/wiki/Frogger&quot;&gt;Frogger&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Pac-Man_(1982_video_game&quot;&gt;Pacman&lt;/a&gt;) ( though the demon slugs were loosely inspired by the
+Brain enemy’s cruise missiles from &lt;a href=&quot;http://www.atariprotos.com/5200/software/robotron/robotron.htm&quot;&gt;Robotron&lt;/a&gt; Projecting the game screen onto the various TV sets was a bit of an afterthought ( I had recently noticed that the television set makes numerous appearances throughout the episodes, so I figured including them would improve the immersion. )&lt;/p&gt;
+&lt;p&gt;Just as I experienced with &lt;a href=&quot;https://www.mydecadetv.com&quot;&gt;MyDecadeTV&lt;/a&gt;, this project was an absolute joy to work on. And I’m very grateful for the
+&lt;a href=&quot;https://www.cnet.com/news/play-netflixs-atari-style-stranger-things-video-game/&quot;&gt;recent&lt;/a&gt; &lt;a href=&quot;http://www.popularmechanics.com/culture/tv/a24990/stranger-things-game/&quot;&gt;attention&lt;/a&gt;
+it’s &lt;a href=&quot;http://www.digitaltrends.com/gaming/netflix-stranger-things-atari-style-game/&quot;&gt;received&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;http://strangergames.gorch.com&quot;&gt;here&lt;/a&gt; if you’d like to play &lt;em&gt;Stranger Games&lt;/em&gt;.
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;/articles/strangergames/strangergames.gif&quot; alt=&quot;strangergames&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Netflix Zone (VR Prototype)</title>
+      <link>http://localhost:8080/articles/netflixzone/</link>
+      <pubDate>Tue, 24 May 2016 15:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/netflixzone/</guid>
+      <author></author>
+      <description>&lt;p&gt;A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=DOyWUHcK06E &quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/DOyWUHcK06E/0.jpg&quot; alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;640&quot; height=&quot;360&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Also featured in the &lt;a href=&quot;http://techblog.netflix.com/2016/05/netflix-hack-day-spring-2016.html&quot;&gt;Netflix Tech Blog&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>SongBranch</title>
+      <link>http://localhost:8080/articles/songbranch/</link>
+      <pubDate>Tue, 08 Mar 2016 05:29:00 -0800</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/songbranch/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just released my latest project, &lt;a href=&quot;http://songbranch.gorch.com&quot;&gt;SongBranch&lt;/a&gt;. It’s basically an interactive song lyric
+visualization app. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;sbsq.png&quot; style=&quot;width: 200px;&quot;/&gt;&lt;/center&gt;
+
+&lt;p&gt;The edges are colorized as a heat map based on the word/phrase frequency. There are three different
+graph views: The default &lt;strong&gt;Normal&lt;/strong&gt; view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
+possible. The &lt;strong&gt;Simple&lt;/strong&gt; view displays each song verse as an individual node, whereas the &lt;strong&gt;Detailed&lt;/strong&gt; view is a graph of each individual word.  You get interesting results from songs based on how the words are structured and repeated. Here are a few of my favorite findings:&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=daft+punk&amp;amp;songTitle=technologic&quot;&gt;Daft Punk - Technologic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_daftpunk_technologic.png&quot; alt=&quot;daftpunk&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=eminem&amp;amp;songTitle=rap+god&quot;&gt;Eminem - Rap God&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_eminem_rapgod-1024x556.png&quot; alt=&quot;eminem&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=madonna&amp;amp;songTitle=like+a+prayer&quot;&gt;Madonna - Like a Prayer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_madonnalikeaprayer-1024x521.png&quot; alt=&quot;madonna&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=radiohead&amp;amp;songTitle=creep&quot;&gt;Radiohead - Creep&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_radioheadcreep-1024x563.png&quot; alt=&quot;radiohead&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=chumbawumba&amp;amp;songTitle=tubthumping&quot;&gt;Chumbawumba - Tubthumping&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_chumbawumba-1024x556.png&quot; alt=&quot;chumbawumba&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
