@@ -6,13 +6,12 @@ template: article.jade
 ---
 
 
-Just released my latest project, [SongBranch](http://songbranch.gorch.com). It's basically an interactive song lyric
+Just released my latest project, [SongBranch](http://songbranch.gorch.com). It's basically an interactive song lyric
 visualization app. 
-
 
 <span class="more"></span>
 
-<center><img src="sbsq.png" style="width: 200px;"/></center>
+<a href="http://songbranch.gorch.com"><img src="sbsq.png" alt="songbranch_app" style="width:200px"/></a>
 
 The edges are colorized as a heat map based on the word/phrase frequency. There are three different
 graph views: The default **Normal** view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
@@ -39,3 +38,5 @@ possible. The **Simple** view displays each song verse as an individual node, wh
 [Chumbawumba - Tubthumping](http://songbranch.gorch.com/?artistName=chumbawumba&amp;songTitle=tubthumping)
 
 ![chumbawumba](sb_chumbawumba-1024x556.png)
+
+Click [here](http://songbranch.gorch.com) to try it!

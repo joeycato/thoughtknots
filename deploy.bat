@@ -1,5 +1,5 @@
 rm -rf ./build
-wintersmith build
+call wintersmith build
 cd ./build
 git init .
 git add .

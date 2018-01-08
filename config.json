@@ -3,7 +3,7 @@
     "url": "http://localhost:8080",
     "name": "Thought Knots",
     "owner": "Joey Cato",
-    "description": "The meandering musings and exploratory hacks of Joey Cato"
+    "description": "The meandering musings and hacks of Joey Cato"
   },
   "plugins": [
     "./plugins/paginator.coffee"
@@ -21,6 +21,6 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 3
+    "perPage": 4
   }
 }

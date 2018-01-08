@@ -107,6 +107,7 @@ hr {
   text-align: center;
   font-weight: 400;
   letter-spacing: 1px;
+  font-style: italic;
 }
 
 .header .description {
@@ -221,6 +222,7 @@ footer .copy, footer .copy a {
 .more, .date {
   font-family: 'Merriweather', serif;
   font-variant: small-caps;
+  font-style: italic;
   text-transform: lowercase;
   font-weight: 400;
   text-rendering: auto;

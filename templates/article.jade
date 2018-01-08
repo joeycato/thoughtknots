@@ -11,12 +11,11 @@ block header
   include author
   h1= page.title
   p.author
-    | #{ 'Written by ' }
-    mixin author(page.metadata.author)
+    span= moment.utc(page.date).format('DD MMMM YYYY')
 
 block content
   article.article
-    section.content!= typogr(page.html).typogrify()
+    section.content!= page.html
 
 block prepend footer
   div.nav
