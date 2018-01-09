@@ -1,5 +1,5 @@
 ---
-title: "Seen N Show (Win32)"
+title: "Seek N Show (Win32)"
 author: joey cato
 date: 2000-08-08 15:00
 template: article.jade
