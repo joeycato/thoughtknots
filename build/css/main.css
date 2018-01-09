@@ -88,7 +88,7 @@ hr {
 }
 
 .header h1 {
-  font-size: 2.6em;
+  font-size: 2.0em;
   text-align: center;
   font-weight: 700;
   margin: 0;
@@ -111,14 +111,14 @@ hr {
 }
 
 .header .description {
-  font-size: 1.2em;
+  font-size: 1.0em;
   font-style: italic;
   text-align: center;
   margin-top: -0.3em;
 }
 
 body.article-detail > header h1 {
-  font-size: 2.5em;
+  font-size: 2.0em;
   font-style: italic;
   font-weight: 400;
   margin-bottom: -0.2em;
@@ -186,7 +186,7 @@ footer .copy, footer .copy a {
   text-align: center;
   font-weight: 400;
   margin: 0.8em 0;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .article header h2 a {
@@ -238,7 +238,7 @@ footer .copy, footer .copy a {
 }
 
 .archive h2 {
-  font-size: 2em;
+  font-size: 1em;
   margin: 0;
   margin-left: 6.1em;
   margin-bottom: 0.5em;
@@ -381,7 +381,7 @@ code.lang-markdown .bullet {
 /* media queries */
 
 @media (min-width: 1600px) {
-  body { font-size: 26px; }
+  body { font-size: 22px; }
 }
 
 @media (max-width: 900px) {
