@@ -5,7 +5,9 @@ date: 2017-08-31 15:00
 template: article.jade
 ---
 
-*Netflix Hack Day (Summer edition)* has arrived! For this experimental hack, we decided to add multiple visualizations to Netflix
+[Netflix Hack
+Day](https://www.theverge.com/tldr/2017/8/29/16221508/netflix-hack-day-summer-2018-teleflix-spookyflix-raspberry-pi) has
+arrived again! For this experimental hack, we decided to add multiple visualizations to Netflix
 subtitles during playback. 
 
 
