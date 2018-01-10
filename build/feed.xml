@@ -392,5 +392,48 @@ rule-systems and tedious table look-ups  )&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;ocean.jpg&quot; style=&quot;width:994px&quot; /&gt;&lt;/p&gt;
 </description>
     </item>
+    <item>
+      <title>A.S.I.M.O.V. (Win32)</title>
+      <link>http://localhost:8080/articles/asimov/</link>
+      <pubDate>Mon, 11 May 1998 15:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/asimov/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;strong&gt;A.S.I.M.O.V.&lt;/strong&gt; (&lt;em&gt;Automated Stellar Image Mapping and Object Visualization&lt;/em&gt;) is a proof-of-concept expert system I created that imports bitmaps of the starry night, and then employs constellation recognition algorithms to identify them.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To achieve accurate recognition I applied a series of programmatic filters to each image beforehand, then devised a comparison algorithm which compared the triangle meshes of the star points.  By relying on the familiar principle of similarity of triangles, I was able to find matches on sample photos, regardless of scale and orientation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;asimov.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;asimov2.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Galactic Gorch II</title>
+      <link>http://localhost:8080/articles/galacticgorch2/</link>
+      <pubDate>Mon, 01 May 1995 15:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/galacticgorch2/</guid>
+      <author></author>
+      <description>&lt;p&gt;Your home planet Zardoff has been invaded by the evil overlord Vexx and your citizens depend on you to protect them. To win the game, you must survive 9 waves of enemy strikes.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This was my first shoot-em-up game. I had written it as a Galaga/Space Invaders clone. Each enemy ship has a very unique style of movement. To make the game-play challenging, the player would have to contend with multiple enemies at a time, requiring careful maneuvering of the ship.&lt;/p&gt;
+&lt;p&gt;Written in C, it originally evolved from MVPPaint’s sample source code (bitmap rendering example) Incidentally, I also used MVPPaint to design all of the game art.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;gorch1.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;gorch2.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Jurassic Park: Text Adventure (BBS)</title>
+      <link>http://localhost:8080/articles/jurassicpark/</link>
+      <pubDate>Sun, 01  Aug 1993 15:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/jurassicpark/</guid>
+      <author></author>
+      <description>&lt;p&gt;After reading Michael Crichton’s Jurassic Park novel, I felt inspired to try and capture the experience with my own game. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;jp.gif&quot; style=&quot;width:720px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To give you a bit of context, this was back in the early 1990’s, when BBS (Bulletin Board Systems) ruled. &lt;strong&gt;JP:TA&lt;/strong&gt;
+(&lt;em&gt;Jurassic Park: Text Adventure&lt;/em&gt;) was written as a BBS door application in C which I had been learning around that time. There weren’t any graphics other than the ANSI title screen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;JP:TA&lt;/strong&gt; was designed as a combat-centric RPG-lite game. The main goal was to explore the island as one of the book’s characters and use your limited weapon arsenal to wipe out the remaining dinosaurs. It required a fairly simple strategy of  pursuing the weaker dinosaurs first, gradually building up your experience until you were ready to take on the final powerful T-Rex.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;jpgame.jpg&quot; style=&quot;width:972px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;jpgame2.jpg&quot; style=&quot;width:972px&quot; /&gt;&lt;/p&gt;
+</description>
+    </item>
   </channel>
 </rss>
