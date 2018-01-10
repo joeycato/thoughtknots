@@ -14,7 +14,9 @@
       <pubDate>Thu, 31  Aug 2017 15:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/subtitlereactions/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;em&gt;Netflix Hack Day (Summer edition)&lt;/em&gt; has arrived! For this experimental hack, we decided to add multiple visualizations to Netflix
+      <description>&lt;p&gt;&lt;a href=&quot;https://www.theverge.com/tldr/2017/8/29/16221508/netflix-hack-day-summer-2018-teleflix-spookyflix-raspberry-pi&quot;&gt;Netflix Hack
+Day&lt;/a&gt; has
+arrived again! For this experimental hack, we decided to add multiple visualizations to Netflix
 subtitles during playback. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Basically, each time a subtitle changes on-screen, we add the following overlays:&lt;/p&gt;
