@@ -1,4 +1,3 @@
-rm -rf ./build
 wintersmith build
 cd ./build && \
 git init . && \
