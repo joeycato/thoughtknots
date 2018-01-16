@@ -5,7 +5,7 @@ date: 2014-06-08 15:00
 template: article.jade
 ---
 
-Following the footsteps of [My80sTV](http://my80stv.com) and [My90sTV](http://my90stvc.com), My70sTV is now officially released. 
+Following the footsteps of [My80sTV](http://my80stv.com) and [My90sTV](http://my90stv.com), My70sTV is now officially released. 
 
 <span class="more"></span>
 
