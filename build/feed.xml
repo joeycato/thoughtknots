@@ -130,6 +130,20 @@ and create a interactive map from all of the local businesses listed back then.&
 </description>
     </item>
     <item>
+      <title>PacPeeps</title>
+      <link>http://localhost:8080/articles/pacpeeps/</link>
+      <pubDate>Wed, 25 Mar 2015 05:29:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/pacpeeps/</guid>
+      <author></author>
+      <description>&lt;p&gt;Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes
+are navigated simultaneously :)&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Player controls: Arrow keys to move and SPACE to restart&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/pacpeeps/pacpeeps.png&quot; alt=&quot;pacpeeps&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;http://gorch.com/pacpeeps&quot;&gt;here&lt;/a&gt; to play it.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Songs</title>
       <link>http://localhost:8080/articles/songs/</link>
       <pubDate>Sun, 15 Mar 2015 05:29:00 -0700</pubDate>
