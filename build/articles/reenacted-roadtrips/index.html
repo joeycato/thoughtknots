@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Re-enacted Road Trips - Thought Knots
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="The meandering musings and hacks of Joey Cato">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Re-enacted Road Trips</h1>
+        <p class="author"><span>05 May 2018</span></p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><h1 id="multi-video-synchronization-with-ffmpeg">Multi-Video Synchronization with FFmpeg</h1>
+<p><a href="https://www.youtube.com/watch?v=ojo1l0Wf2EI" title="Watch Video"><img src="/articles/reenacted-roadtrips/fakethumb.png" alt="Synced roadtrip from Paris, Texas"></a></p>
+<p>Over the last winter break I spent time archiving an old collection of camcorder tapes to hard drive. Most of the
+recordings were just randomly-captured silly moments of yesteryear, but one particular set of videos caught my
+attention: a few scenic joyrides across the familiar streets and neighborhoods of my hometown (Paris, Texas 🤠) in 2003.</p>
+<p><span class="more"></span></p>
+<p>Wondering exactly how much of the town had changed over the course of approximately 15 years, it occurred to me that I
+could effectively answer that question just by re-recording the same journeys on my next Texas visit and comparing the
+videos afterwards. Ultimately I wanted to create a split-screen video from this experiment, so accurate synchronization between the two videos was paramount.</p>
+<p>And so I decided to embark on a new side project which ended up rewarding me with a much better understanding of <a href="https://www.ffmpeg.org/"><strong>FFmpeg</strong></a>,
+a wonderfully versatile video editing tool. This blog post basically documents that experiment.</p>
+<p>I should briefly mention that while I work at Netflix, my official role there is as a <em>UI engineer</em> so I don’t
+consider myself an expert on <em>video</em>, even though it’s a central component of our business.
+If anything, I’m just doing things like this to learn more! 😀 </p>
+<h2 id="basic-approach-slice-scale-and-splice-">basic approach ( “slice, scale, and splice” )</h2>
+<p>The basic synchronization strategy I adopted was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each <em>2003</em> segment was compared with its <em>2018</em> counterpart and ( generally speaking ) the shorter/fastest segment video was “slowed down” until its duration matched the longer/slower segment.</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="705.15" height="367.772" viewBox="0 0 186.571 97.306"><path fill="#00d9d0" fill-opacity=".502" d="M2.374 9.566h17.828v6.682H2.374z"/><path fill="#f0f" d="M19.144 9.566h36.349v6.682h-36.35z"/><path fill="#00f" d="M55.492 9.566h14.426v6.682H55.492z"/><path fill="#0f0" d="M69.918 9.566h25.765v6.682H69.918z"/><path fill="#00d9d0" fill-opacity=".502" d="M2.374 76.043h32.305v6.682H2.374z"/><path fill="#f0f" d="M34.15 76.043h26.785v6.682H34.15z"/><path fill="#00f" d="M60.935 76.043h28.687v6.682H60.935z"/><path fill="#0f0" d="M89.623 76.043h38.49v6.682h-38.49z"/><path d="M2.374 16.248h16.77L33.62 42.177H1.315z" fill="#ececec"/><text style="line-height:1.25" x="59.039" y="27.592" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="27.592" font-size="7.056">2003 clip segment durations</tspan></text><text style="line-height:1.25" x="59.039" y="110.573" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="110.573" font-size="7.056">2018 clip segment durations</tspan></text><path d="M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z" fill="#ececec"/><path fill="#ffd5d5" d="M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z"/><path fill="#00d9d0" fill-opacity=".502" d="M1.316 42.177H33.62v6.682H1.316z"/><path fill="#f0f" d="M36.267 42.177h36.349v6.682h-36.35z"/><path fill="#0f0" d="M106.594 42.177h38.49v6.682h-38.49z"/><path fill="#00f" d="M75.26 42.177h28.688v6.682H75.26z"/><path fill="#ffd5d5" d="M147.732 42.177h37.483v6.682h-37.483z"/><path d="M69.918 16.248h25.765l49.401 25.929h-38.49z" fill="#ececec"/><text style="line-height:1.25" x="61.187" y="59.818" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="61.187" y="59.818" font-size="7.056">longer segment durations</tspan></text></svg>
+
+<p>Once this process was complete, it was then just a matter of splicing the longest segments together to generate a final video.</p>
+<p><em>Note</em>: Originally I was able to accomplish this using Apple’s <em>iMovie</em> ( thanks to its nifty
+<em><a href="https://support.apple.com/kb/PH22933?locale=en_US&amp;viewlocale=en_US">Speed</a></em> slider feature ) however
+over time I found it a bit tedious and error-prone ( the application supports only one primary video track and modifying
+the segment durations by hand didn’t alway feel precise )</p>
+<h2 id="preparing-the-videos">preparing the videos</h2>
+<p>Since I want my final split-screen video to be rendered in <strong>1080p</strong>, I chose to scale each clip to fit within a
+<strong>960x540</strong> window. This size was intentionally chosen to preserve the original 16:9 aspect ratio of the two videos.</p>
+<p><code>ffmpeg -i ./clip2003.avi -vcodec huffyuv -vf scale=960:540 -r 60 -vsync cfr -an clip2003_60fps_960x540.avi</code>
+<code>ffmpeg -i ./clip2018.avi -vcodec huffyuv -vf scale=960:540 -r 60 -vsync cfr -an clip2018_60fps_960x540.avi</code></p>
+<ul>
+<li><strong>-i</strong> <em>inputfile</em> <span style="color:blue"> – Specifies the input file</span></li>
+<li><strong>-vcodec</strong> <em>codec</em> <span style="color:blue"> – Chooses a video codec for the output video</span></li>
+<li><strong>-vf scale=</strong> <em>width:height</em> <span style="color:blue"> – Changes the video resolution</span></li>
+<li><strong>-r</strong> <em>framerate</em> <span style="color:blue"> – Sets new frame rate</span></li>
+<li><strong>-vsync cfr</strong> <span style="color:blue"> – Forces output to be at a constant frame rate</span></li>
+<li><strong>-an</strong> <span style="color:blue"> – Removes audio stream</span></li>
+</ul>
+<p>With the <strong>-vcodec huffyuv</strong> argument, I’m basically requesting that this operation output to a lossless AVI container. I’ll be retaining
+this parameter going forward with each subsequent ffmpeg call since I don’t want to compromise the original video
+quality. By the way, I could have configured this to output to a MP4 instead, since the H.264 codec also supports a
+lossless mode. I decided to stick with the AVI format though since my earlier tests on a Win64 machine ran much faster.
+There is one tradeoff to be aware of, the <em>HuffYUV</em> codec generates ridiculously large files. I wasn’t too bothered by
+this, since disk space is “cheap” as they say. </p>
+<p>I added the <strong>-r 60 -vsync cfr</strong> args to achieve a common constant frame rate between the two videos ( 60fps was the
+higher FPS of the two original videos. ) This is important since it ensures better accuracy and
+consistency on alignment later as the individual segments are synchronized ( The AVI format by default uses a variable rate, which isn’t deterministic enough for our calculations.) </p>
+<p>I’m also using the <strong>-an</strong> parameter to strip out the audio since it’s not really useful to me. Slowing down the video
+segments would inconveniently affect the sound anyway and, besides, I can still add my own custom soundtrack later.</p>
+<h2 id="creating-the-sync-points">creating the sync points</h2>
+<p>Next I’ll define the official sync points of the two videos, i.e. those timestamps which represent common geographic
+positions shared between the two separate video timelines. These sync points are used to divide up the clip into
+multiple segments.  Generating these by hand was cumbersome, so I decided to quickly hack together a JavaScript-based
+GUI ( affectionally named <em>Syncerator</em> ) to manage this for me. By writing a custom app I was able to quickly use keyboard
+shortcuts to add, edit and delete the points. I also eventually extended it to include a live preview mode ( taking
+advantage of HTML5 Video’s adjustable <em>playbackRate</em> property. ) </p>
+<p><center>(Screenshot of <em>Syncerator</em> app)</center>
+<a href="/articles/reenacted-roadtrips/syncerator.jpg"><img src="/articles/reenacted-roadtrips/syncerator.jpg" alt="Syncerator"></a></p>
+<p><em>Note:</em> You might notice above that the two embedded video frames don’t exactly match up. This is because my camcorders
+have different <strong><a href="https://en.wikipedia.org/wiki/Field_of_view">field of view</a></strong> specs ( The newer lens has a
+wider viewing angle and closer objects appear more stretched ) This didn’t bother me that much during actual playback so
+I just accepted it. </p>
+<h2 id="step-1-slicing-splitting-the-clips-into-segments-">step 1: “slicing” ( splitting the clips into segments )</h2>
+<p>Once I have a list of curated timestamps, I can then iterate through them and extract the in-between segments:</p>
+<p>// Example of first segment from each clip being extracted
+<code>ffmpeg -ss 0 -t 2 -i clip2003_60fps_960x540.avi -vcodec huffyuv -r 240 -vsync cfr segment_2003_1.avi</code>
+<code>ffmpeg -ss 0 -t 3 -i clip2018_60fps_960x540.avi -vcodec huffyuv -r 240 -vsync cfr segment_2018_1.avi</code></p>
+<ul>
+<li><strong>-ss</strong> <em>seconds</em> <span style="color:blue"> – Seek to the starting timestamp position</span></li>
+<li><strong>-t</strong> <em>seconds</em> <span style="color:blue"> – Limit duration to this amount</span></li>
+</ul>
+<p>In case you may be wondering why the <strong>-i</strong> argument is not listed first, this is just an optimization to prevent FFmpeg
+from unnecessarily decoding the entire input video before seeking to the requested timestamp. It’s basically informing
+FFmpeg to apply the extraction directly on the input clip instead of the decoded output.</p>
+<p><em>Note:</em> The <strong>-ss</strong>, <strong>-t</strong> arguments also support the <em>hh:mm:ss</em> format. I just chose to use <em>seconds</em> in my case because it was simpler to directly export those units from the editor.</p>
+<p>During the extraction you’ll notice that I’m also artificially increasing the frame rate to a higher multiple
+(<strong>240fps</strong>.) This is basically just a workaround to minimize precision loss later when the segments are scaled to a
+calculated duration that might not perfectly align with the base frame rate. This may seem like a trivial concern at
+first blush but as the multiple segments are concatenated it could have a cumulative effect causing the resulting videos to progressively fall more out of sync.</p>
+<h2 id="step-2-scaling-extending-the-shorter-segments-">step 2: “scaling” ( extending the shorter segments )</h2>
+<p>Now that all of the clip segments have been extracted, the next step is to evaluate them ( comparing the <em>2003</em> versions against <em>2018</em>)</p>
+<p>For each pair, I identify the shorter segment and calculate the necessary scale factor which would be 
+multiplied on the other segment in order to match the same duration.</p>
+<p><strong>scaleFactor</strong> = <em>durationOfLongerSegment</em> / <em>durationOfShorterSegment</em></p>
+<p>In the above example, since the <em>2003</em> sample segment ( 2 sec ) is shorter than the <em>2018</em> sample segment ( 3 sec ), a scale factor for the <em>2003</em> version will be determined:</p>
+<p><strong>scaleFactor</strong> = 3 seconds / 2 seconds = 1.5</p>
+<p>To actually change the duration on the video itself, I’m basically going to be overriding the segment’s <strong>PTS</strong> (<em>Presentation Time Stamp</em>.) The presentation timestamp represents the exact time in which a video frame should be rendered and also is generally used to synchronize other stream types such as audio and subtitles. </p>
+<p>FFmpeg exposes a <strong>setpts</strong> filter for customizing this. In this context, it helps to think of the current PTS as a variable. So
+in order to change the resulting duration, I just need to multiply the scale factor as follows:</p>
+<p><code>ffmpeg -i segment_2003_1.avi -vf &quot;setpts=(1.5)*PTS&quot; -vcodec huffyuv -vsync cfr segment_2003_1_scaled.avi</code></p>
+<ul>
+<li><strong>-vf</strong> <em>filter</em> <span style="color:blue"> – Set a custom video filter</span></li>
+</ul>
+<p><a href="/articles/reenacted-roadtrips/sync.gif"><img src="/articles/reenacted-roadtrips/sync.gif" alt="Synchronized segment example"></a></p>
+<p><em>Note:</em> I’m favoring the longer segment duration in the comparisons above to keep this guide simple. It’s a safe default to use if you want to maximize scenic footage but it’s not always ideal. For example, it doesn’t make much sense to slow a video segment to a crawl just because in the other segment a car is stuck waiting patiently 😑 at a red light. For that reason, I actually chose to override this behavior in a few cases.</p>
+<h2 id="step-3-splicing-reconnecting-the-segments-">step 3: “splicing” ( reconnecting the segments )</h2>
+<p>At this point I’ve compared all of the segments so finally I’m going to use them to recreate the full videos - but include the newer (i.e. longer) versions this time.
+To simplify this, I’m creating an ordered list of clips for each year:</p>
+<pre><code>// segments2003.txt
+file &#39;segment_2003_1_scaled.avi&#39;
+file &#39;segment_2003_2.avi&#39;
+file &#39;segment_2003_3_scaled.avi&#39;
+file &#39;segment_2003_4_scaled.avi&#39;
+file &#39;segment_2003_5.avi&#39;
+...
+
+// segments2018.txt
+file &#39;segment_2018_1.avi&#39;
+file &#39;segment_2018_2_scaled.avi&#39;
+file &#39;segment_2018_3.avi&#39;
+file &#39;segment_2018_4.avi&#39;
+file &#39;segment_2018_5_scaled.avi&#39;
+...
+</code></pre><p>Now they can be joined together:</p>
+<p><code>ffmpeg -f concat -i segments2003.txt -vcodec huffyuv -vsync cfr -r 60 final2003.avi</code>
+<code>ffmpeg -f concat -i segments2018.txt -vcodec huffyuv -vsync cfr -r 60 final2018.avi</code></p>
+<ul>
+<li><strong>-f concat</strong> - <span style="color:blue">Specifies input format as a list of files to join</span></li>
+</ul>
+<p>Once the segments are concatenated, I’m adding the <strong>-r 60</strong> argument to restore the original framerate ( since the
+earlier <em>240fps</em> was only needed to help align the extracted and scaled segments )</p>
+<h2 id="wrapping-up">wrapping up</h2>
+<h3 id="creating-the-split-screen">creating the split-screen</h3>
+<p>This final stage is mostly focused on presentation. To achieve a split-screen effect, I basically need to vertically stack the
+final videos together. Once again, FFmpeg makes things easy for us:</p>
+<p><code>ffmpeg -i final2003.avi -i final2018.avi -vcodec huffyuv -filter_complex vstack final_splitscreen.avi</code></p>
+<ul>
+<li><strong>-filter_complex</strong> <em>filterType</em> <span style="color:blue"> –Select complex video filter</span></li>
+</ul>
+<p>( The <strong>vstack</strong> filter type above is informing FFmpeg to apply a “vertical stack” layout on the two input videos. )</p>
+<p>Having a split-screen video is cool and all, but doesn’t it doesn’t provide much context to someone viewing it for the
+first time. So I thought I’d have a little fun and add <em>Back To The Future</em>-esque LCD clock labels to each pane (
+Special Thanks to Samuel Reynolds for creating the retro-LCD <a href="https://www.dafont.com/lcd-lcd-mono.font">font</a> that was
+used. )</p>
+<p>The following command adds centered labels at the top of each pane of the 960x1080p video:</p>
+<p><code>ffmpeg -i final_splitscreen.avi</code>
+<code>-vf &quot;[in]drawtext=fontfile=./fonts/LCDMN___.ttf: text=&#39;MARCH 18, 2018&#39;: fontcolor=7DE06F: fontsize=34:</code>
+<code>box=1: boxcolor=black@1.0: boxborderw=5:</code>
+<code>x=(w-text_w)/2: y=540+20,</code>
+<code>drawtext=fontfile=./fonts/LCDMN___.ttf: text=&#39;OCTOBER 27, 2003&#39;: fontcolor=FF9A3D: fontsize=34:</code>
+<code>box=1: boxcolor=black@1.0: boxborderw=5:</code>
+<code>x=(w-text_w)/2: y=20&quot;</code>
+<code>-vcodec huffyuv final_splitscreen_labeled.avi</code></p>
+<p><a href="/articles/reenacted-roadtrips/bttf_small.png"><img src="/articles/reenacted-roadtrips/bttf_small.png" alt="BTTF-style label"></a></p>
+<h3 id="publishing">publishing</h3>
+<p>I’m almost done at this point. I just need to do something about the really large video file which remains ( due to my earlier
+decision of sticking with the lossless AVI format 😀 )</p>
+<p>That’s not a problem since in this final step I’m going to transcode it to a much smaller Internet-friendly MP4 video
+format by using the H.264 codec. Also, since I’m ultimately uploading this video to YouTube anyway, I’ll include all of Google’s recommending
+settings ( Credit to Jernej Virag for nicely documenting the extra params <a href="https://www.virag.si/2015/06/encoding-videos-for-youtube-with-ffmpeg/">here</a>):</p>
+<p><code>ffmpeg -i final_splitscreen_labeled.avi -codec:v libx264</code>
+<code>-crf 21 -bf 2 -flags +cgop -pix_fmt yuv420p -codec:a aac</code>
+<code>-strict -2 -b:a 384k -r:a 48000 -movflags faststart final_splitscreen_labeled.mp4</code></p>
+<p>Now is a good time to mention that the above command will actually produce a <em>lossy</em> video, although the <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#crf"><strong>Constant
+Rate Factor</strong></a> ( H.264’s default quality setting )
+can be directly configured by changing the <strong>-crf</strong> value. While the above CRF value of <em>21</em> introduces some quality
+loss, it’s a nice compromise since it’s perceptibly lossless in most cases while having the benefit of better compression.</p>
+<p><em>Note</em>: The supported range of CRF is <em>0</em> to <em>51</em> ( with <em>0</em> being lossless and <em>51</em> representing worst quality / best
+compression ) If the <em>-crf</em> argument isn’t included in the command, FFmpeg will assume a default value of <em>23</em>.</p>
+<h2 id="conclusion">conclusion</h2>
+<p>Thanks for reading! If you feel inspired to go out and create your own multi-synced video, I’d love to hear about it (
+please feel free to share it with a search-friendly <strong>#roadtripsync</strong> tag. ) To save you time with the synchronization
+itself, <a href="https://gist.github.com/joeycato/7f1d78e06e32f30e53ee4bbb4dbc7d50">here</a> is a Python script that automates the
+“<em>slice, scale, and splice</em>“ steps.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
+        <section class="about"><p><a href="http://joeycato.com"><img src="/joey160.gif" alt="joey"></a></p>
+<p>email: <a href="mailto:&#106;&#x6f;&#101;&#x79;&#99;&#x61;&#x74;&#x6f;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#106;&#x6f;&#101;&#x79;&#99;&#x61;&#x74;&#x6f;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
+<p>twitter: <a href="https://twitter.com/joeycato">@joeycato</a></p>
+<p>github: <a href="https://github.com/joeycato">joeycato</a></p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2018 Joey Cato &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-112581073-1', 'joeycato.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
