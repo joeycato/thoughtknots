@@ -1,7 +1,7 @@
 ---
-title: "Re-enacted Road Trips"
+title: "Road Trips Reenacted"
 author: joey cato
-date: 2018-05-05 15:00
+date: 2018-06-01 15:00
 template: article.jade
 ---
 

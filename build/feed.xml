@@ -5,13 +5,13 @@
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
     <description>The meandering musings and hacks of Joey Cato</description>
-    <pubDate>Sat, 05 May 2018 15:00:00 -0700</pubDate>
+    <pubDate>Fri, 01 Jun 2018 15:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
-      <title>Re-enacted Road Trips</title>
+      <title>Road Trips Reenacted</title>
       <link>http://localhost:8080/articles/reenacted-roadtrips/</link>
-      <pubDate>Sat, 05 May 2018 15:00:00 -0700</pubDate>
+      <pubDate>Fri, 01 Jun 2018 15:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/reenacted-roadtrips/</guid>
       <author></author>
       <description>&lt;h1 id=&quot;multi-video-synchronization-with-ffmpeg&quot;&gt;Multi-Video Synchronization with FFmpeg&lt;/h1&gt;
