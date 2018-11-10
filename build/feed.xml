@@ -5,9 +5,27 @@
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
     <description>The meandering musings and hacks of Joey Cato</description>
-    <pubDate>Fri, 01 Jun 2018 15:00:00 -0700</pubDate>
+    <pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Soundtrack Streamer</title>
+      <link>http://localhost:8080/articles/soundtrackstreamer/</link>
+      <pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/soundtrackstreamer/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-fall-2018-c05dda4b98c1&quot;&gt;Netflix Hack
+Day - Fall 2018&lt;/a&gt; recently 
+passed and as always it was very fun to participate. I decided to use this occasion to build a ReactJS streaming app that connects
+with a back-end database ( in this case PSQL )&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Soundtrack Streamer&lt;/b&gt; is a Chrome browser extension that lets you access the soundtrack data from a Netflix-owned
+title and directly stream its licensed songs using a variety of options: Spotify, Youtube ( music videos, karaoke, and
+lyrics ) Special Thanks to the Amadeus team ( including Neha Kapoor and Nick Osztreicher ) for providing the data source
+that made this hack possible! )&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/soundtrackstreamer/soundtrackstreamer.png&quot; alt=&quot;soundtrackstreamer&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Road Trips Reenacted</title>
       <link>http://localhost:8080/articles/reenacted-roadtrips/</link>
