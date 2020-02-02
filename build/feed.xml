@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Thought Knots</title>
-    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://localhost:8080</link>
-    <description>The meandering musings and hacks of Joey Cato</description>
-    <pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate>
-    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
-    <language>en</language>
-    <item>
-      <title>Soundtrack Streamer</title>
-      <link>http://localhost:8080/articles/soundtrackstreamer/</link>
-      <pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/soundtrackstreamer/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-fall-2018-c05dda4b98c1&quot;&gt;Netflix Hack
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Thought Knots</title><atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://localhost:8080</link><description>The meandering musings and hacks of Joey Cato</description><pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>Soundtrack Streamer</title><link>http://localhost:8080/articles/soundtrackstreamer/</link><pubDate>Sat, 10 Nov 2018 14:56:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/soundtrackstreamer/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-fall-2018-c05dda4b98c1&quot;&gt;Netflix Hack
 Day - Fall 2018&lt;/a&gt; recently 
 passed and as always it was very fun to participate. I decided to use this occasion to build a ReactJS streaming app that connects
 with a back-end database ( in this case PSQL )&lt;/p&gt;
@@ -24,15 +8,7 @@ title and directly stream its licensed songs using a variety of options: Spotify
 lyrics ) Special Thanks to the Amadeus team ( including Neha Kapoor and Nick Osztreicher ) for providing the data source
 that made this hack possible! )&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/soundtrackstreamer/soundtrackstreamer.png&quot; alt=&quot;soundtrackstreamer&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Road Trips Reenacted</title>
-      <link>http://localhost:8080/articles/reenacted-roadtrips/</link>
-      <pubDate>Fri, 01 Jun 2018 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/reenacted-roadtrips/</guid>
-      <author></author>
-      <description>&lt;h1 id=&quot;multi-video-synchronization-with-ffmpeg&quot;&gt;Multi-Video Synchronization with FFmpeg&lt;/h1&gt;
+</description></item><item><title>Road Trips Reenacted</title><link>http://localhost:8080/articles/reenacted-roadtrips/</link><pubDate>Fri, 01 Jun 2018 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/reenacted-roadtrips/</guid><author></author><description>&lt;h1 id=&quot;multi-video-synchronization-with-ffmpeg&quot;&gt;Multi-Video Synchronization with FFmpeg&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ojo1l0Wf2EI&quot; title=&quot;Watch Video&quot;&gt;&lt;img src=&quot;/articles/reenacted-roadtrips/fakethumb.png&quot; alt=&quot;Synced roadtrip from Paris, Texas&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Over the last winter break I spent time archiving an old collection of camcorder tapes to hard drive. Most of the
 recordings were just randomly-captured silly moments of yesteryear, but one particular set of videos caught my
@@ -48,11 +24,10 @@ consider myself an expert on &lt;em&gt;video&lt;/em&gt;, even though it’s a ce
 If anything, I’m just doing things like this to learn more! 😀 &lt;/p&gt;
 &lt;h2 id=&quot;basic-approach-slice-scale-and-splice-&quot;&gt;basic approach ( “slice, scale, and splice” )&lt;/h2&gt;
 &lt;p&gt;The basic synchronization strategy I adopted was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each &lt;em&gt;2003&lt;/em&gt; segment was compared with its &lt;em&gt;2018&lt;/em&gt; counterpart and ( generally speaking ) the shorter/fastest segment video was “slowed down” until its duration matched the longer/slower segment.&lt;/p&gt;
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;705.15&quot; height=&quot;367.772&quot; viewBox=&quot;0 0 186.571 97.306&quot;&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M2.374 9.566h17.828v6.682H2.374z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M19.144 9.566h36.349v6.682h-36.35z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M55.492 9.566h14.426v6.682H55.492z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M69.918 9.566h25.765v6.682H69.918z&quot;/&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M2.374 76.043h32.305v6.682H2.374z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M34.15 76.043h26.785v6.682H34.15z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M60.935 76.043h28.687v6.682H60.935z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M89.623 76.043h38.49v6.682h-38.49z&quot;/&gt;&lt;path d=&quot;M2.374 16.248h16.77L33.62 42.177H1.315z&quot; fill=&quot;#ececec&quot;/&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;59.039&quot; y=&quot;27.592&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;59.039&quot; y=&quot;27.592&quot; font-size=&quot;7.056&quot;&gt;2003 clip segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;59.039&quot; y=&quot;110.573&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;59.039&quot; y=&quot;110.573&quot; font-size=&quot;7.056&quot;&gt;2018 clip segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;path d=&quot;M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z&quot; fill=&quot;#ececec&quot;/&gt;&lt;path fill=&quot;#ffd5d5&quot; d=&quot;M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z&quot;/&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M1.316 42.177H33.62v6.682H1.316z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M36.267 42.177h36.349v6.682h-36.35z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M106.594 42.177h38.49v6.682h-38.49z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M75.26 42.177h28.688v6.682H75.26z&quot;/&gt;&lt;path fill=&quot;#ffd5d5&quot; d=&quot;M147.732 42.177h37.483v6.682h-37.483z&quot;/&gt;&lt;path d=&quot;M69.918 16.248h25.765l49.401 25.929h-38.49z&quot; fill=&quot;#ececec&quot;/&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;61.187&quot; y=&quot;59.818&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;61.187&quot; y=&quot;59.818&quot; font-size=&quot;7.056&quot;&gt;longer segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;/svg&gt;
-
+&lt;p&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;705.15&quot; height=&quot;367.772&quot; viewBox=&quot;0 0 186.571 97.306&quot;&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M2.374 9.566h17.828v6.682H2.374z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M19.144 9.566h36.349v6.682h-36.35z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M55.492 9.566h14.426v6.682H55.492z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M69.918 9.566h25.765v6.682H69.918z&quot;/&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M2.374 76.043h32.305v6.682H2.374z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M34.15 76.043h26.785v6.682H34.15z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M60.935 76.043h28.687v6.682H60.935z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M89.623 76.043h38.49v6.682h-38.49z&quot;/&gt;&lt;path d=&quot;M2.374 16.248h16.77L33.62 42.177H1.315z&quot; fill=&quot;#ececec&quot;/&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;59.039&quot; y=&quot;27.592&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;59.039&quot; y=&quot;27.592&quot; font-size=&quot;7.056&quot;&gt;2003 clip segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;59.039&quot; y=&quot;110.573&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;59.039&quot; y=&quot;110.573&quot; font-size=&quot;7.056&quot;&gt;2018 clip segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;path d=&quot;M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z&quot; fill=&quot;#ececec&quot;/&gt;&lt;path fill=&quot;#ffd5d5&quot; d=&quot;M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z&quot;/&gt;&lt;path fill=&quot;#00d9d0&quot; fill-opacity=&quot;.502&quot; d=&quot;M1.316 42.177H33.62v6.682H1.316z&quot;/&gt;&lt;path fill=&quot;#f0f&quot; d=&quot;M36.267 42.177h36.349v6.682h-36.35z&quot;/&gt;&lt;path fill=&quot;#0f0&quot; d=&quot;M106.594 42.177h38.49v6.682h-38.49z&quot;/&gt;&lt;path fill=&quot;#00f&quot; d=&quot;M75.26 42.177h28.688v6.682H75.26z&quot;/&gt;&lt;path fill=&quot;#ffd5d5&quot; d=&quot;M147.732 42.177h37.483v6.682h-37.483z&quot;/&gt;&lt;path d=&quot;M69.918 16.248h25.765l49.401 25.929h-38.49z&quot; fill=&quot;#ececec&quot;/&gt;&lt;text style=&quot;line-height:1.25&quot; x=&quot;61.187&quot; y=&quot;59.818&quot; font-weight=&quot;400&quot; font-size=&quot;10.583&quot; letter-spacing=&quot;0&quot; word-spacing=&quot;0&quot; transform=&quot;translate(-14.731 -20.432)&quot; font-family=&quot;sans-serif&quot; stroke-width=&quot;.265&quot;&gt;&lt;tspan x=&quot;61.187&quot; y=&quot;59.818&quot; font-size=&quot;7.056&quot;&gt;longer segment durations&lt;/tspan&gt;&lt;/text&gt;&lt;/svg&gt;&lt;/p&gt;
 &lt;p&gt;Once this process was complete, it was then just a matter of splicing the longest segments together to generate a final video.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: Originally I was able to accomplish this using Apple’s &lt;em&gt;iMovie&lt;/em&gt; ( thanks to its nifty
-&lt;em&gt;&lt;a href=&quot;https://support.apple.com/kb/PH22933?locale=en_US&amp;amp;viewlocale=en_US&quot;&gt;Speed&lt;/a&gt;&lt;/em&gt; slider feature ) however
+*&lt;a href=&quot;https://support.apple.com/kb/PH22933?locale=en_US&amp;amp;viewlocale=en_US&quot;&gt;Speed&lt;/a&gt;* slider feature ) however
 over time I found it a bit tedious and error-prone ( the application supports only one primary video track and modifying
 the segment durations by hand didn’t alway feel precise )&lt;/p&gt;
 &lt;h2 id=&quot;preparing-the-videos&quot;&gt;preparing the videos&lt;/h2&gt;
@@ -86,8 +61,9 @@ multiple segments.  Generating these by hand was cumbersome, so I decided to qui
 GUI ( affectionally named &lt;em&gt;Syncerator&lt;/em&gt; ) to manage this for me. By writing a custom app I was able to quickly use keyboard
 shortcuts to add, edit and delete the points. I also eventually extended it to include a live preview mode ( taking
 advantage of HTML5 Video’s adjustable &lt;em&gt;playbackRate&lt;/em&gt; property. ) &lt;/p&gt;
-&lt;p&gt;&lt;center&gt;(Screenshot of &lt;em&gt;Syncerator&lt;/em&gt; app)&lt;/center&gt;
-&lt;a href=&quot;/articles/reenacted-roadtrips/syncerator.jpg&quot;&gt;&lt;img src=&quot;/articles/reenacted-roadtrips/syncerator.jpg&quot; alt=&quot;Syncerator&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;(Screenshot of *Syncerator* app)&lt;/center&gt;
+[![Syncerator](syncerator.jpg)](syncerator.jpg)
+
 &lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; You might notice above that the two embedded video frames don’t exactly match up. This is because my camcorders
 have different &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Field_of_view&quot;&gt;field of view&lt;/a&gt;&lt;/strong&gt; specs ( The newer lens has a
 wider viewing angle and closer objects appear more stretched ) This didn’t bother me that much during actual playback so
@@ -142,8 +118,7 @@ file &amp;#39;segment_2018_2_scaled.avi&amp;#39;
 file &amp;#39;segment_2018_3.avi&amp;#39;
 file &amp;#39;segment_2018_4.avi&amp;#39;
 file &amp;#39;segment_2018_5_scaled.avi&amp;#39;
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now they can be joined together:&lt;/p&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now they can be joined together:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ffmpeg -f concat -i segments2003.txt -vcodec huffyuv -vsync cfr -r 60 final2003.avi&lt;/code&gt;
 &lt;code&gt;ffmpeg -f concat -i segments2018.txt -vcodec huffyuv -vsync cfr -r 60 final2018.avi&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -194,15 +169,7 @@ compression ) If the &lt;em&gt;-crf&lt;/em&gt; argument isn’t included in the 
 please feel free to share it with a search-friendly &lt;strong&gt;#roadtripsync&lt;/strong&gt; tag. ) To save you time with the synchronization
 itself, &lt;a href=&quot;https://gist.github.com/joeycato/7f1d78e06e32f30e53ee4bbb4dbc7d50&quot;&gt;here&lt;/a&gt; is a Python script that automates the
 “&lt;em&gt;slice, scale, and splice&lt;/em&gt;“ steps.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Altered Video Player</title>
-      <link>http://localhost:8080/articles/alteredvideoplayer/</link>
-      <pubDate>Tue, 13 Mar 2018 19:46:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/alteredvideoplayer/</guid>
-      <author></author>
-      <description>&lt;p&gt;Wow, time has flown! Yet another &lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-winter-2018-b36ee09699d6&quot;&gt;Netflix Hack Day&lt;/a&gt; has come to pass. For the Winter 2018 event, I decided to experiment with the combination of HTML5 Video and Canvas. The result of that effort is the Altered Video Player!&lt;/p&gt;
+</description></item><item><title>Altered Video Player</title><link>http://localhost:8080/articles/alteredvideoplayer/</link><pubDate>Tue, 13 Mar 2018 19:46:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/alteredvideoplayer/</guid><author></author><description>&lt;p&gt;Wow, time has flown! Yet another &lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-winter-2018-b36ee09699d6&quot;&gt;Netflix Hack Day&lt;/a&gt; has come to pass. For the Winter 2018 event, I decided to experiment with the combination of HTML5 Video and Canvas. The result of that effort is the Altered Video Player!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/alteredvideoplayer/avpbanner.png&quot; alt=&quot;avpbanner&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;AVP&lt;/strong&gt; is basically a video player that autogenerates a jigsaw puzzle from its source in real-time ( in this case a selected Netflix Original trailer.) 
@@ -211,15 +178,7 @@ You can also upload your own custom videos if you choose.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: This hack was developed/tested primarily with the desktop version of Google Chrome ( experience may vary on other browsers )&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://gorch.com/hacks/avp/&quot;&gt;here&lt;/a&gt; to play!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/alteredvideoplayer/avp_screen.png&quot; alt=&quot;avpscreen&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Subtitle Reactions!</title>
-      <link>http://localhost:8080/articles/subtitlereactions/</link>
-      <pubDate>Thu, 31  Aug 2017 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/subtitlereactions/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;https://www.theverge.com/tldr/2017/8/29/16221508/netflix-hack-day-summer-2018-teleflix-spookyflix-raspberry-pi&quot;&gt;Netflix Hack
+</description></item><item><title>Subtitle Reactions!</title><link>http://localhost:8080/articles/subtitlereactions/</link><pubDate>Thu, 31  Aug 2017 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/subtitlereactions/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;https://www.theverge.com/tldr/2017/8/29/16221508/netflix-hack-day-summer-2018-teleflix-spookyflix-raspberry-pi&quot;&gt;Netflix Hack
 Day&lt;/a&gt; has
 arrived again! For this experimental hack, we decided to add multiple visualizations to Netflix
 subtitles during playback. &lt;/p&gt;
@@ -236,15 +195,7 @@ subtitles during playback. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/subtitlereactions/subtitlereactions2.png&quot; alt=&quot;subtitlereactions2&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/subtitlereactions/demo.jpg&quot; alt=&quot;demo&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Check out the Netflix &lt;a href=&quot;https://medium.com/netflix-techblog/netflix-hack-day-summer-2017-ef3ba81a8a77&quot;&gt;tech blog&lt;/a&gt; to see other hacks.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Stranger Games</title>
-      <link>http://localhost:8080/articles/strangergames/</link>
-      <pubDate>Fri, 03 Feb 2017 15:00:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/strangergames/</guid>
-      <author></author>
-      <description>&lt;p&gt;For my recent &lt;a href=&quot;http://techblog.netflix.com/2017/01/netflix-hack-day-winter-2017.html&quot;&gt;Netflix Hack Day&lt;/a&gt; project, I had a
+</description></item><item><title>Stranger Games</title><link>http://localhost:8080/articles/strangergames/</link><pubDate>Fri, 03 Feb 2017 15:00:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/strangergames/</guid><author></author><description>&lt;p&gt;For my recent &lt;a href=&quot;http://techblog.netflix.com/2017/01/netflix-hack-day-winter-2017.html&quot;&gt;Netflix Hack Day&lt;/a&gt; project, I had a
 strong desire to create something based on &lt;a href=&quot;https://www.netflix.com/title/80057281&quot;&gt;Stranger Things&lt;/a&gt;, a Netflix Original
 that debuted last year and quickly quenched my thirst of 80’s nostalgia.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -253,8 +204,8 @@ that debuted last year and quickly quenched my thirst of 80’s nostalgia.&lt;/p
 some kind of video game homage as well. It also interested me to design something in the process that was more
 era-appropriate. Since our &lt;em&gt;Stranger Things&lt;/em&gt; story begins in 1983, it seemed logical to aim for an &lt;a href=&quot;https://en.wikipedia.org/wiki/Atari_2600_hardware&quot;&gt;Atari 2600&lt;/a&gt; aesthetic. Even the show itself referenced Atari, so that was all the convincing I needed :)&lt;/p&gt;
 &lt;p&gt;In the end I decided to borrow game-play elements from &lt;a href=&quot;https://en.wikipedia.org/wiki/Frogger&quot;&gt;Frogger&lt;/a&gt; and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Pac-Man_(1982_video_game&quot;&gt;Pacman&lt;/a&gt;) ( though the demon slugs were loosely inspired by the
-Brain enemy’s cruise missiles from &lt;a href=&quot;http://www.atariprotos.com/5200/software/robotron/robotron.htm&quot;&gt;Robotron&lt;/a&gt; )
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Pac-Man_(1982_video_game))&quot; title=&quot; though the demon slugs were loosely inspired by the
+Brain enemy&amp;#39;s cruise missiles from [Robotron](http://www.atariprotos.com/5200/software/robotron/robotron.htm&quot;&gt;Pacman&lt;/a&gt;
 Projecting the game screen onto the various TV sets was a bit of an afterthought ( I had recently noticed that the
 television set makes numerous appearances throughout the episodes, so I figured including them would improve the
 immersion and effect. )&lt;/p&gt;
@@ -264,37 +215,22 @@ it’s &lt;a href=&quot;http://www.digitaltrends.com/gaming/netflix-stranger-thi
 &lt;p&gt;Click &lt;a href=&quot;http://strangergames.gorch.com&quot;&gt;here&lt;/a&gt; if you’d like to play &lt;em&gt;Stranger Games&lt;/em&gt;.
 &lt;br&gt;&lt;br&gt;
 &lt;img src=&quot;/articles/strangergames/strangergames.gif&quot; alt=&quot;strangergames&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Netflix Zone (VR Prototype)</title>
-      <link>http://localhost:8080/articles/netflixzone/</link>
-      <pubDate>Tue, 24 May 2016 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/netflixzone/</guid>
-      <author></author>
-      <description>&lt;p&gt;A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.&lt;/p&gt;
+</description></item><item><title>Netflix Zone (VR Prototype)</title><link>http://localhost:8080/articles/netflixzone/</link><pubDate>Tue, 24 May 2016 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/netflixzone/</guid><author></author><description>&lt;p&gt;A VR prototype created for the HTC Vive that lets you experience Netflix as if it were a vintage video rental store.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;iframe width=&quot;700&quot; height=&quot;393&quot; src=&quot;https://www.youtube.com/embed/DOyWUHcK06E&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Developing this VR demo was more fun that I originally expected. I decided to use &lt;em&gt;Unity&lt;/em&gt; for the project, since I was already familiar
 with C#. It was pretty intuitive getting adjusted to it, so I’ll likely revisit it again in the future.&lt;/p&gt;
 &lt;p&gt;NetflixZone was also featured in the &lt;a href=&quot;http://techblog.netflix.com/2016/05/netflix-hack-day-spring-2016.html&quot;&gt;Netflix Tech Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>SongBranch</title>
-      <link>http://localhost:8080/articles/songbranch/</link>
-      <pubDate>Tue, 08 Mar 2016 05:29:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/songbranch/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just released my latest project, &lt;a href=&quot;http://songbranch.gorch.com&quot;&gt;SongBranch&lt;/a&gt;. It’s basically an interactive song lyric
+</description></item><item><title>SongBranch</title><link>http://localhost:8080/articles/songbranch/</link><pubDate>Tue, 08 Mar 2016 05:29:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/songbranch/</guid><author></author><description>&lt;p&gt;Just released my latest project, &lt;a href=&quot;http://songbranch.gorch.com&quot;&gt;SongBranch&lt;/a&gt;. It’s basically an interactive song lyric
 visualization app. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com&quot;&gt;&lt;img src=&quot;sbsq.png&quot; alt=&quot;songbranch_app&quot; style=&quot;width:200px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The edges are colorized as a heat map based on the word/phrase frequency. There are three different
 graph views: The default &lt;strong&gt;Normal&lt;/strong&gt; view uses a custom algorithm to display a graph the song lyrics in the fewest nodes
 possible. The &lt;strong&gt;Simple&lt;/strong&gt; view displays each song verse as an individual node, whereas the &lt;strong&gt;Detailed&lt;/strong&gt; view is a graph of each individual word.  You get interesting results from songs based on how the words are structured and repeated. Here are a few of my favorite findings:&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
+
 &lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=daft+punk&amp;amp;songTitle=technologic&quot;&gt;Daft Punk - Technologic&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_daftpunk_technologic.png&quot; alt=&quot;daftpunk&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=eminem&amp;amp;songTitle=rap+god&quot;&gt;Eminem - Rap God&lt;/a&gt;&lt;/p&gt;
@@ -306,139 +242,66 @@ possible. The &lt;strong&gt;Simple&lt;/strong&gt; view displays each song verse 
 &lt;p&gt;&lt;a href=&quot;http://songbranch.gorch.com/?artistName=chumbawumba&amp;amp;songTitle=tubthumping&quot;&gt;Chumbawumba - Tubthumping&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/songbranch/sb_chumbawumba-1024x556.png&quot; alt=&quot;chumbawumba&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://songbranch.gorch.com&quot;&gt;here&lt;/a&gt; to try it!&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Paris, Texas in 1981</title>
-      <link>http://localhost:8080/articles/paris1981/</link>
-      <pubDate>Sat, 13 Feb 2016 05:29:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/paris1981/</guid>
-      <author></author>
-      <description>&lt;p&gt;For my latest excursion in nostalgia, I decided to scan in an old (1981) city directory from my home town (Paris, Texas)
+</description></item><item><title>Paris, Texas in 1981</title><link>http://localhost:8080/articles/paris1981/</link><pubDate>Sat, 13 Feb 2016 05:29:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/paris1981/</guid><author></author><description>&lt;p&gt;For my latest excursion in nostalgia, I decided to scan in an old (1981) city directory from my home town (Paris, Texas)
 and create a interactive map from all of the local businesses listed back then.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://gorch.com/paris1981&quot;&gt;here&lt;/a&gt; to try it!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/paris1981/paristx1981.jpg&quot; alt=&quot;paristx1981&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>rxify</title>
-      <link>http://localhost:8080/articles/rxify/</link>
-      <pubDate>Wed, 30 Dec 2015 05:29:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/rxify/</guid>
-      <author></author>
-      <description>&lt;p&gt;An RxJS library wrapper that lets you execute Rx operators directly using marble-diagram ASCII string arguments.&lt;/p&gt;
+</description></item><item><title>rxify</title><link>http://localhost:8080/articles/rxify/</link><pubDate>Wed, 30 Dec 2015 05:29:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/rxify/</guid><author></author><description>&lt;p&gt;An RxJS library wrapper that lets you execute Rx operators directly using marble-diagram ASCII string arguments.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;rxify&lt;/strong&gt; was mainly created as an educational tool to guide those ramping up on &lt;a href=&quot;https://github.com/Reactive-Extensions/&quot;&gt;Reactive Extensions&lt;/a&gt; for the first time by presenting an alternative way to visualize and experiment on its asynchronous features. However, some folks may find it useful for other purposes such as general problem-solving or simplifying unit tests.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/rxify&quot;&gt;https://www.npmjs.com/package/rxify&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/joeycato/rxify&quot;&gt;https://github.com/joeycato/rxify&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>PacPeeps</title>
-      <link>http://localhost:8080/articles/pacpeeps/</link>
-      <pubDate>Wed, 25 Mar 2015 05:29:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/pacpeeps/</guid>
-      <author></author>
-      <description>&lt;p&gt;Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes
+</description></item><item><title>PacPeeps</title><link>http://localhost:8080/articles/pacpeeps/</link><pubDate>Wed, 25 Mar 2015 05:29:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/pacpeeps/</guid><author></author><description>&lt;p&gt;Spent some vacation time making a small game. To win, you must eat all the dots, but with an added twist: All four mazes
 are navigated simultaneously :)&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Player controls: Arrow keys to move and SPACE to restart&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/pacpeeps/pacpeeps.png&quot; alt=&quot;pacpeeps&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://gorch.com/pacpeeps&quot;&gt;here&lt;/a&gt; to play it.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Songs</title>
-      <link>http://localhost:8080/articles/songs/</link>
-      <pubDate>Sun, 15 Mar 2015 05:29:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/songs/</guid>
-      <author></author>
-      <description>&lt;p&gt;I love music, whether I’m writing it or playing it ( mainly keyboard and guitar ) I also enjoy singing it ( those who know me
+</description></item><item><title>Songs</title><link>http://localhost:8080/articles/songs/</link><pubDate>Sun, 15 Mar 2015 05:29:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/songs/</guid><author></author><description>&lt;p&gt;I love music, whether I’m writing it or playing it ( mainly keyboard and guitar ) I also enjoy singing it ( those who know me
 well are aware of my karaoke passion :] )&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://soundcloud.com/joey-cato&quot;&gt;Here&lt;/a&gt; are some old tunes I created a while back, if you’d like to listen.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Say Whaaat!!! (Netflix Subtitle Prototype)</title>
-      <link>http://localhost:8080/articles/saywhaaat/</link>
-      <pubDate>Mon, 09 Mar 2015 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/saywhaaat/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;strong&gt;Say Whaaat!!!&lt;/strong&gt; provides a more convenient way to to catch missed dialogue as you watch Netflix by displaying
+</description></item><item><title>Say Whaaat!!! (Netflix Subtitle Prototype)</title><link>http://localhost:8080/articles/saywhaaat/</link><pubDate>Mon, 09 Mar 2015 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/saywhaaat/</guid><author></author><description>&lt;p&gt;&lt;strong&gt;Say Whaaat!!!&lt;/strong&gt; provides a more convenient way to to catch missed dialogue as you watch Netflix by displaying
 subtitles when you pause playback. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;It also provides the ability to navigate a film’s timeline, caption by caption.&lt;/p&gt;
 &lt;iframe width=&quot;700&quot; height=&quot;393&quot; src=&quot;https://www.youtube.com/embed/dDOlyTA1jRA&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allow=&quot;encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Also featured in the &lt;a href=&quot;http://techblog.netflix.com/2015/03/netflix-hack-day-winter-2015.html&quot;&gt;Netflix Tech Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>MyDecadeTV</title>
-      <link>http://localhost:8080/articles/mydecadetv/</link>
-      <pubDate>Fri, 01  Aug 2014 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/mydecadetv/</guid>
-      <author></author>
-      <description>&lt;p&gt;Now that My70sTV.com is released, I decided it was time to put together a meta-site to combine all of the featured TV’s into one portal. &lt;/p&gt;
+</description></item><item><title>MyDecadeTV</title><link>http://localhost:8080/articles/mydecadetv/</link><pubDate>Fri, 01  Aug 2014 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/mydecadetv/</guid><author></author><description>&lt;p&gt;Now that My70sTV.com is released, I decided it was time to put together a meta-site to combine all of the featured TV’s into one portal. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Also, I’ve written a user guide to make the channel-surfing a bit more intuitive.&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://mydecadetv.com&quot;&gt;here&lt;/a&gt; to check it out.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://mydecadetv.com&quot;&gt;&lt;img src=&quot;mydecadetv.jpg&quot; style=&quot;width:200px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>My 70's TV</title>
-      <link>http://localhost:8080/articles/my70stv/</link>
-      <pubDate>Sun, 08 Jun 2014 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/my70stv/</guid>
-      <author></author>
-      <description>&lt;p&gt;Following the footsteps of &lt;a href=&quot;http://my80stv.com&quot;&gt;My80sTV&lt;/a&gt; and &lt;a href=&quot;http://my90stv.com&quot;&gt;My90sTV&lt;/a&gt;, My70sTV is now officially released. &lt;/p&gt;
+</description></item><item><title>My 70's TV</title><link>http://localhost:8080/articles/my70stv/</link><pubDate>Sun, 08 Jun 2014 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/my70stv/</guid><author></author><description>&lt;p&gt;Following the footsteps of &lt;a href=&quot;http://my80stv.com&quot;&gt;My80sTV&lt;/a&gt; and &lt;a href=&quot;http://my90stv.com&quot;&gt;My90sTV&lt;/a&gt;, My70sTV is now officially released. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;It was pretty fun assembling this as I got a chance to listen through an interesting history of music.&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://my70stv.com&quot;&gt;here&lt;/a&gt; to check it out.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://my70stv.com&quot;&gt;&lt;img src=&quot;tv70_200.jpg&quot; alt=&quot;tv70&quot; href=&quot;http://my70stv.com&quot; style=&quot;width:200px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Electronic Arts</title>
-      <link>http://localhost:8080/articles/eagames/</link>
-      <pubDate>Mon, 10 Mar 2014 05:29:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/eagames/</guid>
-      <author></author>
-      <description>&lt;p&gt;After nine exciting years working at EA, I decided it was time for a career change. &lt;/p&gt;
+</description></item><item><title>Electronic Arts</title><link>http://localhost:8080/articles/eagames/</link><pubDate>Mon, 10 Mar 2014 05:29:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/eagames/</guid><author></author><description>&lt;p&gt;After nine exciting years working at EA, I decided it was time for a career change. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Here’s a list of all the industry titles I directly worked on as a software engineer contributing to &lt;em&gt;The Sims&lt;/em&gt; team:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;sims4_logo-300x168.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;thesims3_3ds-300x272.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;simanimals_ds_africa-300x266.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;simanimals_ds-300x267.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;thesims2console_pets-211x300.png&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;mysims_wii_pal-211x300.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;thesims2console-207x300.jpg&quot; style=&quot;width: 300px;&quot;/&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>My 90's TV</title>
-      <link>http://localhost:8080/articles/my90stv/</link>
-      <pubDate>Sun, 12 Jan 2014 15:00:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/my90stv/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;http://my80stv.com&quot;&gt;My80sTV&lt;/a&gt; was a very  fun project and it received way more attention that I ever anticipated, so I naturally followed it up with a similar website that was equally nostalgic to me, My90sTV!&lt;/p&gt;
+&lt;img src=&quot;sims4_logo-300x168.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;thesims3_3ds-300x272.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;simanimals_ds_africa-300x266.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;simanimals_ds-300x267.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;thesims2console_pets-211x300.png&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;mysims_wii_pal-211x300.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+&lt;img src=&quot;thesims2console-207x300.jpg&quot; style=&quot;width: 300px;&quot;/&gt;
+
+</description></item><item><title>My 90's TV</title><link>http://localhost:8080/articles/my90stv/</link><pubDate>Sun, 12 Jan 2014 15:00:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/my90stv/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;http://my80stv.com&quot;&gt;My80sTV&lt;/a&gt; was a very  fun project and it received way more attention that I ever anticipated, so I naturally followed it up with a similar website that was equally nostalgic to me, My90sTV!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The biggest challenge and time sink came from the collection of all the clips. Even though I was able to automate much of the data collection this time, in the end I still manually curated each video to ensure it was correctly tagged with the appropriate year.  So it still remained a time-consuming process. After I was done, the database of clips was almost twice the size as the original My80sTV site! I haven’t decide what decade to pursue next, but it will likely be the 1960’s or 1970’s.&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://my90stv.com&quot;&gt;here&lt;/a&gt; to check it out.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://my90stv.com&quot;&gt;&lt;img src=&quot;tv90_400.jpg&quot; alt=&quot;tv90&quot; href=&quot;http://my90stv.com&quot; style=&quot;width:400px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>My 80's TV</title>
-      <link>http://localhost:8080/articles/my80stv/</link>
-      <pubDate>Sun, 15 Sep 2013 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/my80stv/</guid>
-      <author></author>
-      <description>&lt;p&gt;I’ve always been a huge 80’s nostalgia nut, so I decided honor the decade with my newest web project: My 80’s TV!&lt;/p&gt;
+</description></item><item><title>My 80's TV</title><link>http://localhost:8080/articles/my80stv/</link><pubDate>Sun, 15 Sep 2013 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/my80stv/</guid><author></author><description>&lt;p&gt;I’ve always been a huge 80’s nostalgia nut, so I decided honor the decade with my newest web project: My 80’s TV!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The basic goal of this project is to simulate the vintage experience of channel-surfing on a TV from the 80’s decade as much as possible. &lt;/p&gt;
 &lt;p&gt;Each time you visit the site, the channels are randomized. In order to closely emulate the television watching
@@ -447,125 +310,56 @@ experience, the starting times of the videos are randomized as well. However, el
 &lt;p&gt;On the tech side, I used this project as an opportunity to learn more about jQuery and CSS transitions.&lt;/p&gt;
 &lt;p&gt;Click &lt;a href=&quot;http://my80stv.com&quot;&gt;here&lt;/a&gt; to check it out.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://my80stv.com&quot;&gt;&lt;img src=&quot;tv80_400.jpg&quot; alt=&quot;tv80&quot; href=&quot;http://my80stv.com&quot; style=&quot;width:400px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Space Hex! (HTML5)</title>
-      <link>http://localhost:8080/articles/spacehex/</link>
-      <pubDate>Mon, 21 Jan 2013 15:00:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/spacehex/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;http://www.gorch.com/games/spacehex/&quot;&gt;Space Hex!&lt;/a&gt; is another web game I created while playing around with HTML5 Canvas.&lt;/p&gt;
+</description></item><item><title>Space Hex! (HTML5)</title><link>http://localhost:8080/articles/spacehex/</link><pubDate>Mon, 21 Jan 2013 15:00:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/spacehex/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;http://www.gorch.com/games/spacehex/&quot;&gt;Space Hex!&lt;/a&gt; is another web game I created while playing around with HTML5 Canvas.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This one is puzzle-based (no lightning-fast reflexes required 🙂 ) It should run on most platforms (Only sound was missing when I tested on iPad / Android )&lt;/p&gt;
 &lt;p&gt;To clear each level, Gorch must collect all of the Orbs. Movement is automatic ( as triggered by any valid A* path that opens up between Gorch and an Orb. ) To create such a path, you’ll need to rotate the hexagon rooms. The game is designed to start out easy but becomes progressively more difficult (please don’t hate me when you get to Level 10 🙂 ) Good luck!&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gorch.com/games/spacehex/&quot;&gt;Play Space Hex!&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gorch.com/games/spacehex/&quot;&gt;&lt;img src=&quot;spacehex.jpg&quot; alt=&quot;play_spacehex&quot; style=&quot;width:478px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Space Cavern (HTML5)</title>
-      <link>http://localhost:8080/articles/spacecavern/</link>
-      <pubDate>Thu, 20 Dec 2012 15:00:00 -0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/spacecavern/</guid>
-      <author></author>
-      <description>&lt;p&gt;The premise of the game is simple. Basically it’s a retro-style 2D platformer where you must guide your rocket ship (using WASD or arrow keys) through the cavern and negotiate the various obstacles until you reach the end. &lt;/p&gt;
+</description></item><item><title>Space Cavern (HTML5)</title><link>http://localhost:8080/articles/spacecavern/</link><pubDate>Thu, 20 Dec 2012 15:00:00 -0800</pubDate><guid isPermaLink="true">http://localhost:8080/articles/spacecavern/</guid><author></author><description>&lt;p&gt;The premise of the game is simple. Basically it’s a retro-style 2D platformer where you must guide your rocket ship (using WASD or arrow keys) through the cavern and negotiate the various obstacles until you reach the end. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I was inspired by Super Meat Boy’s difficulty, so I aimed to make this game similarly challenging.&lt;/p&gt;
 &lt;p&gt;I wrote Space Cavern while spending some of my vacation time learning all I could about HTML5. In the process I spent a lot of time playing around with the Canvas API. This game is a result of that educational pursuit.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://gorch.com/html5/spacecavern/&quot;&gt;Play Space Cavern&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gorch.com/html5/spacecavern/&quot;&gt;&lt;img src=&quot;spacecavern.jpg&quot; alt=&quot;play_spacecavern&quot; style=&quot;width:400px&quot;/&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Super Logic Grid! (Win32)</title>
-      <link>http://localhost:8080/articles/superlogicgrid/</link>
-      <pubDate>Sat, 17 Jun 2006 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/superlogicgrid/</guid>
-      <author></author>
-      <description>&lt;p&gt;I’ve always been a fan of logic grid puzzles, but I never came across a video game that emulated it well. This was my attempt to do so, but my additional aim was to also make it more fun and intuitive. &lt;/p&gt;
+</description></item><item><title>Super Logic Grid! (Win32)</title><link>http://localhost:8080/articles/superlogicgrid/</link><pubDate>Sat, 17 Jun 2006 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/superlogicgrid/</guid><author></author><description>&lt;p&gt;I’ve always been a fan of logic grid puzzles, but I never came across a video game that emulated it well. This was my attempt to do so, but my additional aim was to also make it more fun and intuitive. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;You can click on the grid with left or right mouse button to add O’s and X’s.Each time you select a tile, the status will update to reflect its logical translation. &lt;/p&gt;
 &lt;p&gt;To make it more entertaining, each level was designed as a chapter in the story of Commander Gorch and his space adventures.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/superlogicgrid/superlogicgrid.jpg&quot; alt=&quot;superlogicgrid&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Card Game Engine (Win32)</title>
-      <link>http://localhost:8080/articles/cardgameengine/</link>
-      <pubDate>Fri, 04 Jul 2003 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/cardgameengine/</guid>
-      <author></author>
-      <description>&lt;p&gt;Back in 2003, I had an idea for a strategy-based space-themed card game. &lt;/p&gt;
+</description></item><item><title>Card Game Engine (Win32)</title><link>http://localhost:8080/articles/cardgameengine/</link><pubDate>Fri, 04 Jul 2003 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/cardgameengine/</guid><author></author><description>&lt;p&gt;Back in 2003, I had an idea for a strategy-based space-themed card game. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to playtest it originally with a paper prototype, but due to the fact that Ron, one of my strategy buff friends lived out of state I had to resort to an alternate plan. So I developed a network-based card game engine we could use to play the experimental game against each other. &lt;/p&gt;
 &lt;p&gt;It worked out very well for us. Unfortunately, during the playtest process I learned that the game wasn’t as fun as I’d imagined it be (basically the concept is to collect planets and build fortified shields around them before your opponent tries to attack.) As we played, I discovered it felt very imbalanced.&lt;/p&gt;
 &lt;p&gt;Anyway, the upshot was that the program worked very well in serving its purpose and I didn’t need to waste any printer ink/paper. &lt;/p&gt;
 &lt;p&gt;Also, because I designed the engine to be game-agnostic, I could use it to explore other new cardgame ideas, simply by modifying a directory of image and XML files.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/cardgameengine/cardgameengine.jpg&quot; alt=&quot;cardgameengine&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>3D Donut Slicer (Win32)</title>
-      <link>http://localhost:8080/articles/donutslicer/</link>
-      <pubDate>Sat, 17  Aug 2002 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/donutslicer/</guid>
-      <author></author>
-      <description>&lt;p&gt;This project all started innocently enough with the following brain teaser:&lt;/p&gt;
+</description></item><item><title>3D Donut Slicer (Win32)</title><link>http://localhost:8080/articles/donutslicer/</link><pubDate>Sat, 17  Aug 2002 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/donutslicer/</guid><author></author><description>&lt;p&gt;This project all started innocently enough with the following brain teaser:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/donutslicer/donutprob.jpg&quot; alt=&quot;donutprob&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The goal is to find the maximum possible number of pieces resulting from slicing a torus with three arbitrary planes. The inherent problem with this puzzle is that it can be conceptually difficult to reach optimal solutions without relying on a visual aid, which is why I decided to create the app. I also thought of it as a good opportunity to improve my Direct3D experience. What began as a casual pursuit quickly escalated into a Sunday coding frenzy.&lt;/p&gt;
 &lt;p&gt;Using this tool allowed me to reach a better solution (&lt;strong&gt;12&lt;/strong&gt;) than what I originally estimated. Can you find more?&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/donutslicer/donutsoln.jpg&quot; alt=&quot;donutsoln&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Cube Slide Match (Win32)</title>
-      <link>http://localhost:8080/articles/cubeslidematch/</link>
-      <pubDate>Tue, 10 Jul 2001 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/cubeslidematch/</guid>
-      <author></author>
-      <description>&lt;p&gt;This is just a small Direct3D demo written as an experiment to see whether playing a 3D version of a sliding block puzzle would be fun.&lt;/p&gt;
+</description></item><item><title>Cube Slide Match (Win32)</title><link>http://localhost:8080/articles/cubeslidematch/</link><pubDate>Tue, 10 Jul 2001 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/cubeslidematch/</guid><author></author><description>&lt;p&gt;This is just a small Direct3D demo written as an experiment to see whether playing a 3D version of a sliding block puzzle would be fun.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/cubeslidematch/cubeslidematch.jpg&quot; alt=&quot;cubeslidematch&quot;&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>G-Man (Win32)</title>
-      <link>http://localhost:8080/articles/gman/</link>
-      <pubDate>Sun, 01 Apr 2001 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/gman/</guid>
-      <author></author>
-      <description>&lt;p&gt;A tag-based note keeping utility I wrote to facilitate fast and easy data entry/retrieval. &lt;/p&gt;
+</description></item><item><title>G-Man (Win32)</title><link>http://localhost:8080/articles/gman/</link><pubDate>Sun, 01 Apr 2001 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/gman/</guid><author></author><description>&lt;p&gt;A tag-based note keeping utility I wrote to facilitate fast and easy data entry/retrieval. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This was originally written as a simple command-line utility (inspired by the UNIX &lt;em&gt;man -k&lt;/em&gt; command)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gman.gif&quot; style=&quot;width:160px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gmanscr.jpg&quot; style=&quot;width:687px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gmandlg.jpg&quot; style=&quot;width:447px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Seek N Show (Win32)</title>
-      <link>http://localhost:8080/articles/seeknshow/</link>
-      <pubDate>Tue, 08  Aug 2000 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/seeknshow/</guid>
-      <author></author>
-      <description>&lt;p&gt;A multi-threaded intelligent agent app which simplifies the task of collecting public corporation information from the web. &lt;/p&gt;
+&lt;img src=&quot;gman.gif&quot; style=&quot;width:160px&quot; /&gt;
+
+&lt;img src=&quot;gmanscr.jpg&quot; style=&quot;width:687px&quot; /&gt;
+
+&lt;img src=&quot;gmandlg.jpg&quot; style=&quot;width:447px&quot; /&gt;
+</description></item><item><title>Seek N Show (Win32)</title><link>http://localhost:8080/articles/seeknshow/</link><pubDate>Tue, 08  Aug 2000 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/seeknshow/</guid><author></author><description>&lt;p&gt;A multi-threaded intelligent agent app which simplifies the task of collecting public corporation information from the web. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;seeknshowlogo.gif&quot; style=&quot;width:106px&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;seeknshowlogo.gif&quot; style=&quot;width:106px&quot; /&gt;
+
 &lt;p&gt;It simultaneously executes multiple queries in parallel and then synthesizes their results into a final HTML report.&lt;/p&gt;
 &lt;p&gt;Maintaining this app turned out to be quite the chore, as I discovered, since my web parsing code had to be updated constantly to reflect the constant changes on the various websites it sourced. &lt;/p&gt;
 &lt;p&gt;In hindsight, I should have abstracted the parsing code into its own layer where it could be more robustly handled (via Perl or Python regular expressions)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;seeknshow.jpg&quot; style=&quot;width:579px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Paper Rock Scissors 2000 (Win32)</title>
-      <link>http://localhost:8080/articles/prs2000/</link>
-      <pubDate>Sat, 15 Jul 2000 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/prs2000/</guid>
-      <author></author>
-      <description>&lt;p&gt;I had a wonderful time making this game!  The idea for &lt;a title=&quot;Paper Rock Scissors 2000&quot;
+&lt;img src=&quot;seeknshow.jpg&quot; style=&quot;width:579px&quot; /&gt;
+</description></item><item><title>Paper Rock Scissors 2000 (Win32)</title><link>http://localhost:8080/articles/prs2000/</link><pubDate>Sat, 15 Jul 2000 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/prs2000/</guid><author></author><description>&lt;p&gt;I had a wonderful time making this game!  The idea for &lt;a title=&quot;Paper Rock Scissors 2000&quot;
 href=&quot;http://gorch.com/games/prs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Paper Rock Scissors 2000&lt;/a&gt; came to me one day while
 I was trying to imagine a strategy game that would be incredibly simple for anyone to learn and play. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -573,88 +367,59 @@ I was trying to imagine a strategy game that would be incredibly simple for anyo
 playing strategy games up until this point had been largely filled with frustration, e.g. &lt;em&gt;BattleTech&lt;/em&gt; with its complex
 rule-systems and tedious table look-ups  )&lt;/p&gt;
 &lt;p&gt;The first thing that came to mind was Paper, Rock, Scissors, that classic game we all discovered in our youth, whether on a playground or some road trip. I thought it would be a nifty well-balanced game mechanic to exploit. However, I had to overcome the hurdle of randomization, since that didn’t lend itself well to strategy (although today &lt;a title=&quot;Win at Rock, Paper, Scissors&quot; href=&quot;http://www.wikihow.com/Win-at-Rock,-Paper,-Scissors&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;some would beg to differ&lt;/a&gt;. ) I solved this concern by establishing a deck of pre-ordered game pieces which players would draw from.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;prs.gif&quot; style=&quot;width:171px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;prs.jpg&quot; style=&quot;width:524px&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;prs.gif&quot; style=&quot;width:171px&quot; /&gt;
+
+&lt;img src=&quot;prs.jpg&quot; style=&quot;width:524px&quot; /&gt;
+
 &lt;p&gt;In essence &lt;strong&gt;PRS 2000&lt;/strong&gt; is a tile-based strategy game where each turn a player is presented with a random game piece (paper, rock or scissors) that they must drop onto the playing field. When a piece is dropped, the canonical rules of Paper, Rock, Scissors are applied against adjacent tiles, resulting in a zero-sum victory for the player or opponent. To accomplish this, defense is preemptively handled first. For example, if a blue player drops a rock on the board next to a red player’s scissors and paper, then the red player will score the victory flag (since their red paper would initially defeat the blue rock.) Each turn a player drops their piece and as gameplay progresses, the board eventually fills up, making players think more carefully about where to drop their remaining pieces. The winner is the player with the most victory flags at the very end (after no more open tiles are left.)&lt;/p&gt;
 &lt;p&gt;I coded the original prototype of this game as 2-player DOS application, but later I rewrote it as a Win32 application. Eventually, I added single-player mode (CPU follows a weighted-sum strategy) as well as two-player networking mode over TCP/IP. To make the game more attractive for long-time strategy enthusiasts, I added optional game pieces (dynamite, nukes, land mines, and treasure chests)&lt;/p&gt;
 &lt;p&gt;For the graphics I modeled the pieces in 3D with Amorphium then touched them up with a pixel editor.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; src=&quot;http://www.kypsoft.com/portfolio/images/prs.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img class=&quot;aligncenter&quot; src=&quot;http://www.kypsoft.com/portfolio/images/prs.jpg&quot; alt=&quot;&quot; /&gt;
+
 &lt;p&gt;Special Thanks to my good friend Will McWhorter who composed the theme music. He even made a &lt;a title=&quot;Paper Rock Scissors Theme&quot; href=&quot;http://gorch.com/games/prs/prs.mp3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;version&lt;/a&gt; with vocals!&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Gorch's Quest (Win32)</title>
-      <link>http://localhost:8080/articles/gorchsquest/</link>
-      <pubDate>Fri, 09 Jun 2000 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/gorchsquest/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;http://gorch.com/games/gq/&quot;&gt;Gorch’s Quest&lt;/a&gt; is a tile-based space adventure game inspired by Legend of Zelda.&lt;/p&gt;
+</description></item><item><title>Gorch's Quest (Win32)</title><link>http://localhost:8080/articles/gorchsquest/</link><pubDate>Fri, 09 Jun 2000 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/gorchsquest/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;http://gorch.com/games/gq/&quot;&gt;Gorch’s Quest&lt;/a&gt; is a tile-based space adventure game inspired by Legend of Zelda.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqlogo.gif&quot; style=&quot;width:250px&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;gqlogo.gif&quot; style=&quot;width:250px&quot; /&gt;
+
 &lt;p&gt;You are the young hero, Gorch, who must save his planet from the attack of an alien empire that indulges in galactic domination. To do so, you must navigate the catacombs of the Planetary Defense System that has been sabotaged. Find and return the five crystals to the main control room so that the defense system can be reactivated. Good Luck!&lt;/p&gt;
 &lt;p&gt;I learned a great deal while making this game. For example, I found that by creating the level editor as the very first step, it made it much easier to scope out and visualize the game world. This led me to quickly reconsider the game objects I had initially planned. Had I waited until later, it would have taken me much longer to complete the game. Also, I learned what not to do. By this, I’m referring to MFC/GDI which I used exclusively for the graphics and animations ( with the exception of OpenGL for the 3D rendered-walls ) I was able to mitigate some its performance issues by employing sprite-sheets, but things would have been much smoother in the long run with hardware-accelerated graphics.&lt;/p&gt;
 &lt;p&gt;Outside Credits: Thanks to Will McWhorter for composing the background music!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqscr1.gif&quot; style=&quot;width:800px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqscr2.gif&quot; style=&quot;width:800px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqscr3.gif&quot; style=&quot;width:800px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqscr4.gif&quot; style=&quot;width:800px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gqscr5.gif&quot; style=&quot;width:800px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Ocean95 (Win32)</title>
-      <link>http://localhost:8080/articles/ocean95/</link>
-      <pubDate>Wed, 01 Jul 1998 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/ocean95/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;strong&gt;Ocean95&lt;/strong&gt; is a pseudo-life simulation app. The operator may customize an ocean and monitor the interaction between fish, sharks, and plankton. &lt;/p&gt;
+&lt;img src=&quot;gqscr1.gif&quot; style=&quot;width:800px&quot; /&gt;
+
+&lt;img src=&quot;gqscr2.gif&quot; style=&quot;width:800px&quot; /&gt;
+
+&lt;img src=&quot;gqscr3.gif&quot; style=&quot;width:800px&quot; /&gt;
+
+&lt;img src=&quot;gqscr4.gif&quot; style=&quot;width:800px&quot; /&gt;
+
+&lt;img src=&quot;gqscr5.gif&quot; style=&quot;width:800px&quot; /&gt;
+
+</description></item><item><title>Ocean95 (Win32)</title><link>http://localhost:8080/articles/ocean95/</link><pubDate>Wed, 01 Jul 1998 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/ocean95/</guid><author></author><description>&lt;p&gt;&lt;strong&gt;Ocean95&lt;/strong&gt; is a pseudo-life simulation app. The operator may customize an ocean and monitor the interaction between fish, sharks, and plankton. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The hook window feature allows closer inspection of the creatures. Ocean95 was developed during a team-training project. Personal contribution was overall design/code and full development of the GUI interface.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;ocean.jpg&quot; style=&quot;width:994px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>A.S.I.M.O.V. (Win32)</title>
-      <link>http://localhost:8080/articles/asimov/</link>
-      <pubDate>Mon, 11 May 1998 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/asimov/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;strong&gt;A.S.I.M.O.V.&lt;/strong&gt; (&lt;em&gt;Automated Stellar Image Mapping and Object Visualization&lt;/em&gt;) is a proof-of-concept expert system I created that imports bitmaps of the starry night, and then employs constellation recognition algorithms to identify them.&lt;/p&gt;
+&lt;img src=&quot;ocean.jpg&quot; style=&quot;width:994px&quot; /&gt;
+
+</description></item><item><title>A.S.I.M.O.V. (Win32)</title><link>http://localhost:8080/articles/asimov/</link><pubDate>Mon, 11 May 1998 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/asimov/</guid><author></author><description>&lt;p&gt;&lt;strong&gt;A.S.I.M.O.V.&lt;/strong&gt; (&lt;em&gt;Automated Stellar Image Mapping and Object Visualization&lt;/em&gt;) is a proof-of-concept expert system I created that imports bitmaps of the starry night, and then employs constellation recognition algorithms to identify them.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;To achieve accurate recognition I applied a series of programmatic filters to each image beforehand, then devised a comparison algorithm which compared the triangle meshes of the star points.  By relying on the familiar principle of similarity of triangles, I was able to find matches on sample photos, regardless of scale and orientation.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;asimov.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;asimov2.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Galactic Gorch II</title>
-      <link>http://localhost:8080/articles/galacticgorch2/</link>
-      <pubDate>Mon, 01 May 1995 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/galacticgorch2/</guid>
-      <author></author>
-      <description>&lt;p&gt;Your home planet Zardoff has been invaded by the evil overlord Vexx and your citizens depend on you to protect them. To win the game, you must survive 9 waves of enemy strikes.&lt;/p&gt;
+&lt;img src=&quot;asimov.jpg&quot; style=&quot;width:640px&quot; /&gt;
+
+&lt;img src=&quot;asimov2.jpg&quot; style=&quot;width:640px&quot; /&gt;
+</description></item><item><title>Galactic Gorch II</title><link>http://localhost:8080/articles/galacticgorch2/</link><pubDate>Mon, 01 May 1995 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/galacticgorch2/</guid><author></author><description>&lt;p&gt;Your home planet Zardoff has been invaded by the evil overlord Vexx and your citizens depend on you to protect them. To win the game, you must survive 9 waves of enemy strikes.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This was my first shoot-em-up game. I had written it as a Galaga/Space Invaders clone. Each enemy ship has a very unique style of movement. To make the game-play challenging, the player would have to contend with multiple enemies at a time, requiring careful maneuvering of the ship.&lt;/p&gt;
 &lt;p&gt;Written in C, it originally evolved from MVPPaint’s sample source code (bitmap rendering example) Incidentally, I also used MVPPaint to design all of the game art.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gorch1.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;gorch2.jpg&quot; style=&quot;width:640px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Jurassic Park: Text Adventure (BBS)</title>
-      <link>http://localhost:8080/articles/jurassicpark/</link>
-      <pubDate>Sun, 01  Aug 1993 15:00:00 -0700</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/jurassicpark/</guid>
-      <author></author>
-      <description>&lt;p&gt;After reading Michael Crichton’s Jurassic Park novel, I felt inspired to try and capture the experience with my own game. &lt;/p&gt;
+&lt;img src=&quot;gorch1.jpg&quot; style=&quot;width:640px&quot; /&gt;
+
+&lt;img src=&quot;gorch2.jpg&quot; style=&quot;width:640px&quot; /&gt;
+</description></item><item><title>Jurassic Park: Text Adventure (BBS)</title><link>http://localhost:8080/articles/jurassicpark/</link><pubDate>Sun, 01  Aug 1993 15:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:8080/articles/jurassicpark/</guid><author></author><description>&lt;p&gt;After reading Michael Crichton’s Jurassic Park novel, I felt inspired to try and capture the experience with my own game. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;jp.gif&quot; style=&quot;width:720px&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;jp.gif&quot; style=&quot;width:720px&quot; /&gt;
+
 &lt;p&gt;To give you a bit of context, this was back in the early 1990’s, when BBS (Bulletin Board Systems) ruled. &lt;strong&gt;JP:TA&lt;/strong&gt;
 (&lt;em&gt;Jurassic Park: Text Adventure&lt;/em&gt;) was written as a BBS door application in C which I had been learning around that time. There weren’t any graphics other than the ANSI title screen.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;JP:TA&lt;/strong&gt; was designed as a combat-centric RPG-lite game. The main goal was to explore the island as one of the book’s characters and use your limited weapon arsenal to wipe out the remaining dinosaurs. It required a fairly simple strategy of  pursuing the weaker dinosaurs first, gradually building up your experience until you were ready to take on the final powerful T-Rex.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;jpgame.jpg&quot; style=&quot;width:972px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;jpgame2.jpg&quot; style=&quot;width:972px&quot; /&gt;&lt;/p&gt;
-</description>
-    </item>
-  </channel>
-</rss>
+&lt;img src=&quot;jpgame.jpg&quot; style=&quot;width:972px&quot; /&gt;
+
+&lt;img src=&quot;jpgame2.jpg&quot; style=&quot;width:972px&quot; /&gt;
+</description></item></channel></rss>

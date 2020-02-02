@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <title>Road Trips Reenacted - Thought Knots
-    </title>
-    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="The meandering musings and hacks of Joey Cato">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body class="article-detail">
-    <header class="header">
-      <div class="content-wrap">
-        <h1>Road Trips Reenacted</h1>
-        <p class="author"><span>01 June 2018</span></p>
-      </div>
-    </header>
-    <div id="content">
-      <div class="content-wrap">
-        <article class="article">
-          <section class="content"><h1 id="multi-video-synchronization-with-ffmpeg">Multi-Video Synchronization with FFmpeg</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><title>Road Trips Reenacted - Thought Knots</title><link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="The meandering musings and hacks of Joey Cato"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><h1>Road Trips Reenacted</h1><p class="author"><span>01 June 2018</span></p></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><h1 id="multi-video-synchronization-with-ffmpeg">Multi-Video Synchronization with FFmpeg</h1>
 <p><a href="https://www.youtube.com/watch?v=ojo1l0Wf2EI" title="Watch Video"><img src="/articles/reenacted-roadtrips/fakethumb.png" alt="Synced roadtrip from Paris, Texas"></a></p>
 <p>Over the last winter break I spent time archiving an old collection of camcorder tapes to hard drive. Most of the
 recordings were just randomly-captured silly moments of yesteryear, but one particular set of videos caught my
@@ -36,11 +14,10 @@ consider myself an expert on <em>video</em>, even though it’s a central compon
 If anything, I’m just doing things like this to learn more! 😀 </p>
 <h2 id="basic-approach-slice-scale-and-splice-">basic approach ( “slice, scale, and splice” )</h2>
 <p>The basic synchronization strategy I adopted was to initially split up each video into separate clip segments, demarcated by the timestamps of common geographic locations shared between the two clips ( i.e. all encountered street intersections. ) Afterwards, each <em>2003</em> segment was compared with its <em>2018</em> counterpart and ( generally speaking ) the shorter/fastest segment video was “slowed down” until its duration matched the longer/slower segment.</p>
-<svg xmlns="http://www.w3.org/2000/svg" width="705.15" height="367.772" viewBox="0 0 186.571 97.306"><path fill="#00d9d0" fill-opacity=".502" d="M2.374 9.566h17.828v6.682H2.374z"/><path fill="#f0f" d="M19.144 9.566h36.349v6.682h-36.35z"/><path fill="#00f" d="M55.492 9.566h14.426v6.682H55.492z"/><path fill="#0f0" d="M69.918 9.566h25.765v6.682H69.918z"/><path fill="#00d9d0" fill-opacity=".502" d="M2.374 76.043h32.305v6.682H2.374z"/><path fill="#f0f" d="M34.15 76.043h26.785v6.682H34.15z"/><path fill="#00f" d="M60.935 76.043h28.687v6.682H60.935z"/><path fill="#0f0" d="M89.623 76.043h38.49v6.682h-38.49z"/><path d="M2.374 16.248h16.77L33.62 42.177H1.315z" fill="#ececec"/><text style="line-height:1.25" x="59.039" y="27.592" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="27.592" font-size="7.056">2003 clip segment durations</tspan></text><text style="line-height:1.25" x="59.039" y="110.573" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="110.573" font-size="7.056">2018 clip segment durations</tspan></text><path d="M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z" fill="#ececec"/><path fill="#ffd5d5" d="M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z"/><path fill="#00d9d0" fill-opacity=".502" d="M1.316 42.177H33.62v6.682H1.316z"/><path fill="#f0f" d="M36.267 42.177h36.349v6.682h-36.35z"/><path fill="#0f0" d="M106.594 42.177h38.49v6.682h-38.49z"/><path fill="#00f" d="M75.26 42.177h28.688v6.682H75.26z"/><path fill="#ffd5d5" d="M147.732 42.177h37.483v6.682h-37.483z"/><path d="M69.918 16.248h25.765l49.401 25.929h-38.49z" fill="#ececec"/><text style="line-height:1.25" x="61.187" y="59.818" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="61.187" y="59.818" font-size="7.056">longer segment durations</tspan></text></svg>
-
+<p><svg xmlns="http://www.w3.org/2000/svg" width="705.15" height="367.772" viewBox="0 0 186.571 97.306"><path fill="#00d9d0" fill-opacity=".502" d="M2.374 9.566h17.828v6.682H2.374z"/><path fill="#f0f" d="M19.144 9.566h36.349v6.682h-36.35z"/><path fill="#00f" d="M55.492 9.566h14.426v6.682H55.492z"/><path fill="#0f0" d="M69.918 9.566h25.765v6.682H69.918z"/><path fill="#00d9d0" fill-opacity=".502" d="M2.374 76.043h32.305v6.682H2.374z"/><path fill="#f0f" d="M34.15 76.043h26.785v6.682H34.15z"/><path fill="#00f" d="M60.935 76.043h28.687v6.682H60.935z"/><path fill="#0f0" d="M89.623 76.043h38.49v6.682h-38.49z"/><path d="M2.374 16.248h16.77L33.62 42.177H1.315z" fill="#ececec"/><text style="line-height:1.25" x="59.039" y="27.592" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="27.592" font-size="7.056">2003 clip segment durations</tspan></text><text style="line-height:1.25" x="59.039" y="110.573" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="59.039" y="110.573" font-size="7.056">2018 clip segment durations</tspan></text><path d="M36.266 48.859h36.349l-11.68 27.185H34.15zm19.226-32.611h14.426l34.03 25.929H75.261zm92.239 32.611h37.483l-32.469 27.185h-24.631z" fill="#ececec"/><path fill="#ffd5d5" d="M95.923 9.566h37.483v6.682H95.923zm32.191 66.477h24.63v6.682h-24.63z"/><path fill="#00d9d0" fill-opacity=".502" d="M1.316 42.177H33.62v6.682H1.316z"/><path fill="#f0f" d="M36.267 42.177h36.349v6.682h-36.35z"/><path fill="#0f0" d="M106.594 42.177h38.49v6.682h-38.49z"/><path fill="#00f" d="M75.26 42.177h28.688v6.682H75.26z"/><path fill="#ffd5d5" d="M147.732 42.177h37.483v6.682h-37.483z"/><path d="M69.918 16.248h25.765l49.401 25.929h-38.49z" fill="#ececec"/><text style="line-height:1.25" x="61.187" y="59.818" font-weight="400" font-size="10.583" letter-spacing="0" word-spacing="0" transform="translate(-14.731 -20.432)" font-family="sans-serif" stroke-width=".265"><tspan x="61.187" y="59.818" font-size="7.056">longer segment durations</tspan></text></svg></p>
 <p>Once this process was complete, it was then just a matter of splicing the longest segments together to generate a final video.</p>
 <p><em>Note</em>: Originally I was able to accomplish this using Apple’s <em>iMovie</em> ( thanks to its nifty
-<em><a href="https://support.apple.com/kb/PH22933?locale=en_US&amp;viewlocale=en_US">Speed</a></em> slider feature ) however
+*<a href="https://support.apple.com/kb/PH22933?locale=en_US&amp;viewlocale=en_US">Speed</a>* slider feature ) however
 over time I found it a bit tedious and error-prone ( the application supports only one primary video track and modifying
 the segment durations by hand didn’t alway feel precise )</p>
 <h2 id="preparing-the-videos">preparing the videos</h2>
@@ -74,8 +51,9 @@ multiple segments.  Generating these by hand was cumbersome, so I decided to qui
 GUI ( affectionally named <em>Syncerator</em> ) to manage this for me. By writing a custom app I was able to quickly use keyboard
 shortcuts to add, edit and delete the points. I also eventually extended it to include a live preview mode ( taking
 advantage of HTML5 Video’s adjustable <em>playbackRate</em> property. ) </p>
-<p><center>(Screenshot of <em>Syncerator</em> app)</center>
-<a href="/articles/reenacted-roadtrips/syncerator.jpg"><img src="/articles/reenacted-roadtrips/syncerator.jpg" alt="Syncerator"></a></p>
+<center>(Screenshot of *Syncerator* app)</center>
+[![Syncerator](syncerator.jpg)](syncerator.jpg)
+
 <p><em>Note:</em> You might notice above that the two embedded video frames don’t exactly match up. This is because my camcorders
 have different <strong><a href="https://en.wikipedia.org/wiki/Field_of_view">field of view</a></strong> specs ( The newer lens has a
 wider viewing angle and closer objects appear more stretched ) This didn’t bother me that much during actual playback so
@@ -130,8 +108,7 @@ file &#39;segment_2018_2_scaled.avi&#39;
 file &#39;segment_2018_3.avi&#39;
 file &#39;segment_2018_4.avi&#39;
 file &#39;segment_2018_5_scaled.avi&#39;
-...
-</code></pre><p>Now they can be joined together:</p>
+...</code></pre><p>Now they can be joined together:</p>
 <p><code>ffmpeg -f concat -i segments2003.txt -vcodec huffyuv -vsync cfr -r 60 final2003.avi</code>
 <code>ffmpeg -f concat -i segments2018.txt -vcodec huffyuv -vsync cfr -r 60 final2018.avi</code></p>
 <ul>
@@ -182,33 +159,8 @@ compression ) If the <em>-crf</em> argument isn’t included in the command, FFm
 please feel free to share it with a search-friendly <strong>#roadtripsync</strong> tag. ) To save you time with the synchronization
 itself, <a href="https://gist.github.com/joeycato/7f1d78e06e32f30e53ee4bbb4dbc7d50">here</a> is a Python script that automates the
 “<em>slice, scale, and splice</em>“ steps.</p>
-</section>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="content-wrap">
-        <div class="nav"><a href="/">&laquo; Full blog</a></div>
-        <section class="about"><p><a href="http://joeycato.com"><img src="/joey160.gif" alt="joey"></a></p>
-<p>email: <a href="mailto:&#x6a;&#111;&#101;&#121;&#99;&#97;&#x74;&#x6f;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x6a;&#111;&#101;&#121;&#99;&#97;&#x74;&#x6f;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a></p>
+</section></article></div></div><footer><div class="content-wrap"><div class="nav"><a href="/">&laquo; Full blog</a></div><section class="about"><p><a href="http://joeycato.com"><img src="/joey160.gif" alt="joey"></a></p>
+<p>email: <a href="mailto:&#x6a;&#x6f;&#101;&#x79;&#99;&#97;&#116;&#111;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#x6a;&#x6f;&#101;&#x79;&#99;&#97;&#116;&#111;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
 <p>twitter: <a href="https://twitter.com/joeycato">@joeycato</a></p>
 <p>github: <a href="https://github.com/joeycato">joeycato</a></p>
-
-        </section>
-        <section class="copy">
-          <p>&copy; 2018 Joey Cato &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
-          </p>
-        </section>
-      </div>
-    </footer>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-112581073-1', 'joeycato.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
-</html>
+</section><section class="copy"><p>&copy; 2020 Joey Cato &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p></section></div></footer></body></html>
