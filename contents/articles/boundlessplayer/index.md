@@ -5,7 +5,9 @@ date: 2020-03-29 20:00
 template: article.jade
 ---
 
-Today I released a side project I've been tinkering on over the fast few months:
+Today I released <b>boundless video player</b>, a side project I've been tinkering on over the fast few months:
+
+<span class="more"></span>
 
 ![bvplogo](bvplogo.png)
 
